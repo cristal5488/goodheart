@@ -4,8 +4,10 @@
   <h1><%= current_user.name %></h1>
 <% end %>
 
+
   <!-- <%  if current_user.role == 'donor' %>
     <h1>Donor</h1>
   <% else %>
   <h1>Health Provider</h1>
   <%end%> -->
+<%= render 'events/index', locals: {health_providers: @health_providers}%>
