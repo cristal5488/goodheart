@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   root 'dashboard#index'
 
   get '/health_provider_signup'=> 'health_providers#new'
