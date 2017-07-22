@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170721023353) do
+ActiveRecord::Schema.define(version: 20170722190506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,22 @@ ActiveRecord::Schema.define(version: 20170721023353) do
     t.string "role", default: "donor"
   end
 
+  create_table "events", force: :cascade do |t|
+    t.bigint "health_provider_id"
+    t.string "event_name"
+    t.date "date"
+    t.time "start_time"
+    t.time "end_time"
+    t.string "description"
+    t.string "address"
+    t.string "zipcode"
+    t.string "bloodtype"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["health_provider_id"], name: "index_events_on_health_provider_id"
+  end
+
   create_table "health_providers", force: :cascade do |t|
     t.string "facility_name"
     t.string "address"
@@ -41,4 +57,5 @@ ActiveRecord::Schema.define(version: 20170721023353) do
     t.string "role", default: "health_provider"
   end
 
+  add_foreign_key "events", "health_providers"
 end
