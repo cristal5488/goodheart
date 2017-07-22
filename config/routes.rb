@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
   get '/events/index'
   get '/events/new' => 'events#new'
+
 end
