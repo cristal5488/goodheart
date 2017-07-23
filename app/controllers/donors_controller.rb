@@ -1,5 +1,6 @@
 class DonorsController < ApplicationController
-  
+   validates_uniqueness_of :email, :password
+
   def new
     @donor = Donor.new
   end
