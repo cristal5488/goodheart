@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :authorize
+  before_action :validates_is_health_provider, only: [:new, :update, :edit, :create, :destroy]
+
   # GET /events
   # GET /events.json
   def index
@@ -54,9 +56,9 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
-    @event.destroy
+    @event.destroy!
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,7 +66,17 @@ class EventsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
-      @event = current_user.events.find(params[:id])
+      if current_user.role == 'health_provider'
+        @event = current_user.events.find(params[:id])
+      else
+        @event = Event.find(params[:id])
+      end
+    end
+
+    def validates_is_health_provider
+      if current_user.role == 'donor'
+        redirect_to root_path
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
