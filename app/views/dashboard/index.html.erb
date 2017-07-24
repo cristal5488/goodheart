@@ -1,7 +1,7 @@
 <!-- if is a donor -->
 <% if current_donor %>
   <h1>Thank you for your good heart!</h1>
-  <%= render partial: 'donors/profile'%>
+  <%= render partial: 'donors/profile' %>
   <!-- render a partil for donor -->
 <% else %>
   <h1>I'm a health provider</h1>
@@ -9,4 +9,4 @@
 <% end %>
 
 
-<%= render 'events/index', locals: { events: @events }%>
+<%= render 'events/index', events: @events %>

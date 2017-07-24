@@ -33,9 +33,7 @@
         <td><%= event.bloodtype %></td>
         <td><%= event.phone %></td>
         <td><%= link_to 'Show', event %></td>
-        <%= current_user.id %>
-        <%= event.health_provider_id %>
-        <% if current_provider and (event.health_provider == current_provider) %>
+        <% if current_provider and current_provider.has_event?(event) %>
           <td><%= link_to 'Edit', edit_event_path(event) %></td>
           <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
@@ -46,6 +44,6 @@
 
 <br>
 
-<% if current_user.role == 'health_provider' %>
+<% if current_provider %>
   <%= link_to 'New Event', new_event_path %>
 <% end%>
