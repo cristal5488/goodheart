@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Health provider</th>
+
       <th>Event name</th>
       <th>Date</th>
       <th>Start time</th>
@@ -22,7 +22,7 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
-        <td><%= event.health_provider.name %></td>
+
         <td><%= event.event_name %></td>
         <td><%= event.date %></td>
         <td><%= event.start_time %></td>
@@ -35,7 +35,7 @@
         <td><%= link_to 'Show', event %></td>
         <%= current_user.id %>
         <%= event.health_provider_id %>
-        <% if current_user.id == event.health_provider_id && current_user.role == 'health_provider' %>
+        <% if current_provider and (event.health_provider == current_provider) %>
           <td><%= link_to 'Edit', edit_event_path(event) %></td>
           <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
