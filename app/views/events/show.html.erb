@@ -27,7 +27,7 @@
 
 <p>
   <strong>Address:</strong>
-  <%= @event.address %>
+  <span id="address"><%= @event.address %></span>
 </p>
 
 <p>
@@ -122,6 +122,7 @@
         }
       }
     </style>
+  </style>
   </head>
   <body>
     <div id="floating-panel">
@@ -196,6 +197,7 @@
           }
         });
       }
+
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWMaYk1T6lV_Fa65vkgzAayZPU1i_dEnc&callback=initMap">
@@ -203,7 +205,7 @@
   </body>
 </html>
 
-
+<br>
 <% if current_provider and current_provider.has_event?(@event) %>
   <%= link_to 'Edit', edit_event_path(@event) %> |
 <% end %>
