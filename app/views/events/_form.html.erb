@@ -1,3 +1,4 @@
+
 <%= form_with(model: event, local: true) do |form| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
@@ -10,11 +11,6 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :health_provider_id %>
-    <%= form.text_field :health_provider_id, id: :event_health_provider_id %>
-  </div>
 
   <div class="field">
     <%= form.label :event_name %>
@@ -42,8 +38,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :addres %>
-    <%= form.text_field :addres, id: :event_addres %>
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :event_address %>
   </div>
 
   <div class="field">
@@ -52,8 +48,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :blood_type %>
-    <%= form.text_field :blood_type, id: :event_blood_type %>
+    <%= form.label :bloodtype %>
+    <%= form.text_field :bloodtype, id: :event_bloodtype %>
   </div>
 
   <div class="field">

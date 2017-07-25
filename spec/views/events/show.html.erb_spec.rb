@@ -6,9 +6,9 @@ RSpec.describe "events/show", type: :view do
       :health_provider => nil,
       :event_name => "Event Name",
       :description => "Description",
-      :addres => "Addres",
+      :address => "Address",
       :zipcode => "Zipcode",
-      :blood_type => "Blood Type",
+      :bloodtype => "Bloodtype",
       :phone => "Phone"
     ))
   end
@@ -18,9 +18,9 @@ RSpec.describe "events/show", type: :view do
     expect(rendered).to match(//)
     expect(rendered).to match(/Event Name/)
     expect(rendered).to match(/Description/)
-    expect(rendered).to match(/Addres/)
+    expect(rendered).to match(/Address/)
     expect(rendered).to match(/Zipcode/)
-    expect(rendered).to match(/Blood Type/)
+    expect(rendered).to match(/Bloodtype/)
     expect(rendered).to match(/Phone/)
   end
 end

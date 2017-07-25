@@ -20,11 +20,13 @@
 
   <body>
 
-    <% if current_user %>
-    Signed in as <strong><%= current_user.name %> 👋 </strong> | <%= link_to "Logout", '/logout' %>
+    <% if current_donor %>
+      Signed in as <strong><%= current_donor.name %> 👋 </strong> | <%= link_to "Logout", '/logout' %>
+    <% elsif current_provider %>
+      Signed in as <strong><%= current_provider.name %> 👋 </strong> | <%= link_to "Logout", '/logout' %>
     <% else %>
-    <%= link_to 'Login', '/login' %> | <%= link_to 'Provider Signup', '/health_provider_signup' %> | <%= link_to 'Donor Signup', '/donor_signup' %>
-    <!-- <% end %> -->
+      <%= link_to 'Login', '/login' %> | <%= link_to 'Provider Signup', '/health_provider_signup' %> | <%= link_to 'Donor Signup', '/donor_signup' %>
+    <% end %>
 
     <%= yield %>
   </body>

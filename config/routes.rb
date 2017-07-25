@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-  get '/events/index' => 'events#new'
+  get '/events/index' => 'events#index'
+  get '/events/new' => 'events#new'
+
 end

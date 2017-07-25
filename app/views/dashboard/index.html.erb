@@ -1,13 +1,12 @@
-<% if user_role(current_user) %>
-  <h1><%= current_user.name %></h1>
+<!-- if is a donor -->
+<% if current_donor %>
+  <h1>Thank you for your good heart!</h1>
+  <%= render partial: 'donors/profile' %>
+  <!-- render a partil for donor -->
 <% else %>
-  <h1><%= current_user.name %></h1>
+  <h1>I'm a health provider</h1>
+  <%= render partial: 'health_providers/profile'%>
 <% end %>
 
-  <!-- <%  if current_user.role == 'donor' %>
-    <h1>Donor</h1>
-  <% else %>
-  <h1>Health Provider</h1>
-  <%end%> -->
 
-<%= render 'events/index', locals: {health_providers: @health_providers}%>
+<%= render 'events/index', events: @events %>

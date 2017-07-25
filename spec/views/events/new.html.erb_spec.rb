@@ -6,9 +6,9 @@ RSpec.describe "events/new", type: :view do
       :health_provider => nil,
       :event_name => "MyString",
       :description => "MyString",
-      :addres => "MyString",
+      :address => "MyString",
       :zipcode => "MyString",
-      :blood_type => "MyString",
+      :bloodtype => "MyString",
       :phone => "MyString"
     ))
   end
@@ -24,11 +24,11 @@ RSpec.describe "events/new", type: :view do
 
       assert_select "input[name=?]", "event[description]"
 
-      assert_select "input[name=?]", "event[addres]"
+      assert_select "input[name=?]", "event[address]"
 
       assert_select "input[name=?]", "event[zipcode]"
 
-      assert_select "input[name=?]", "event[blood_type]"
+      assert_select "input[name=?]", "event[bloodtype]"
 
       assert_select "input[name=?]", "event[phone]"
     end

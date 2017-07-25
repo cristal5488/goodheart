@@ -1,10 +1,12 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :authorize
+  before_action :validates_is_health_provider, only: [:new, :update, :edit, :create, :destroy]
+
   # GET /events
   # GET /events.json
   def index
-    @events = current_user.events.all
+    @events = current_provider.events
   end
 
   # GET /events/1
@@ -14,7 +16,7 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    @event = current_user.events.new
+    @event = current_provider.events.new
   end
 
   # GET /events/1/edit
@@ -24,7 +26,7 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = current_user.events.new(event_params)
+    @event = current_provider.events.new(event_params)
 
     respond_to do |format|
       if @event.save
@@ -54,9 +56,9 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
-    @event.destroy
+    @event.destroy!
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -64,11 +66,19 @@ class EventsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
-      @event = current_user.events.find(params[:id])
+      if current_provider
+        @event = current_provider.events.find(params[:id])
+      else
+        @event = Event.find(params[:id])
+      end
+    end
+
+    def validates_is_health_provider
+      redirect_to root_path unless current_provider
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:event_name, :date, :start_time, :end_time, :description, :addres, :zipcode, :blood_type, :phone)
+      params.require(:event).permit( :event_name, :date, :start_time, :end_time, :description, :address, :zipcode, :bloodtype, :phone)
     end
 end
