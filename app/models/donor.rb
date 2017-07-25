@@ -1,6 +1,6 @@
 class Donor < ApplicationRecord
   has_secure_password
-  validates_uniqueness_of :phone_number
+
   validates_uniqueness_of :email
   validates_presence_of :bloodtype, message: 'Blood type is required'
 

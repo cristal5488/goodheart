@@ -1,5 +1,5 @@
 class DonorsController < ApplicationController
-  
+
   def new
     @donor = Donor.new
   end

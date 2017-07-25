@@ -8,4 +8,8 @@ class HealthProvider < ApplicationRecord
   def name
     self.facility_name
   end
+
+  def has_event?(event)
+    event.health_provider == self
+  end
 end
