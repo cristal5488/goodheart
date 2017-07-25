@@ -21,7 +21,7 @@ RSpec.feature "User visiting root", type: :feature do
     fill_in "Password confirmation", with: "Testing"
     fill_in "Zipcode", with: "11111"
     fill_in "Phone", with: "111-111-1111"
-    fill_in "Bloodtype", with: "A-"
+    expect(page).to have_select("Bloodtype", options: ["A+", "O+", "B+", "AB+","A-", "O-", "B-", "AB-"])
 
   end
 
