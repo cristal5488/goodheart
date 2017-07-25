@@ -3,6 +3,8 @@ class EventsController < ApplicationController
   before_action :authorize
   # GET /events
   # GET /events.json
+
+
   def index
     @events = current_user.events.all
   end
@@ -10,6 +12,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @analytic = Analytic.new 
   end
 
   # GET /events/new

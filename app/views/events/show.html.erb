@@ -50,5 +50,14 @@
   <%= @event.phone %>
 </p>
 
+<h1>Analitycs</h1>
+
+<% @event.analytics.each do |a|%>
+  <p>Bloodtype: <%= a.bloodtype %></p>
+  <p><%= a.arrival_time.strftime("Arrived on %m/%d/%Y at %I:%M%p") %></p>
+<% end  %>
+
+<%= render :partial => 'analytics/form', analytic: @analytic  %>
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', new_event_path %>
+<%= link_to 'Back', root_path %>
