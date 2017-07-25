@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Health provider:</strong>
-  <%= @event.health_provider %>
-</p>
-
-<p>
   <strong>Event name:</strong>
   <%= @event.event_name %>
 </p>
@@ -32,7 +27,7 @@
 
 <p>
   <strong>Address:</strong>
-  <%= @event.address %>
+  <span id="address"><%= @event.address %></span>
 </p>
 
 <p>
@@ -49,12 +44,9 @@
   <strong>Phone:</strong>
   <%= @event.phone %>
 </p>
-<p>
-<% if current_user.id == @event.health_provider_id && current_user.role == 'health_provider' %>
-  <%= link_to 'Edit', edit_event_path(@event) %> |
-<% end %>
-<%= link_to 'Back', root_path %>
-</p>
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -132,6 +124,7 @@
         }
       }
     </style>
+  </style>
   </head>
   <body>
     <div id="floating-panel">
@@ -169,51 +162,8 @@
     </div>
     <div id="right-panel"></div>
     <div id="map"></div>
-    <script>
-      function initMap() {
-        var directionsDisplay = new google.maps.DirectionsRenderer;
-        var directionsService = new google.maps.DirectionsService;
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
-          center: {lat: 41.85, lng: -87.65}
-        });
-        directionsDisplay.setMap(map);
-        directionsDisplay.setPanel(document.getElementById('right-panel'));
 
-        var control = document.getElementById('floating-panel');
-        control.style.display = 'block';
-        map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
-
-        var onChangeHandler = function() {
-          calculateAndDisplayRoute(directionsService, directionsDisplay);
-        };
-        document.getElementById('start').addEventListener('change', onChangeHandler);
-        document.getElementById('end').addEventListener('change', onChangeHandler);
-      }
-
-      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-        var start = document.getElementById('start').value;
-        var end = document.getElementById('end').value;
-        directionsService.route({
-          origin: start,
-          destination: end,
-          travelMode: 'DRIVING'
-        }, function(response, status) {
-          if (status === 'OK') {
-            directionsDisplay.setDirections(response);
-          } else {
-            window.alert('Directions request failed due to ' + status);
-          }
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhbQgPh31lGOj3BuPQHrTjuR_rMe2_NQU&callback=initMap">
-    </script>
-
-<% if current_user.id == @event.health_provider_id && current_user.role == 'health_provider' %>
+<% if current_provider and current_provider.has_event?(@event) %>
   <%= link_to 'Edit', edit_event_path(@event) %> |
 <% end %>
 <%= link_to 'Back', root_path %>
-</body>
-</html>
