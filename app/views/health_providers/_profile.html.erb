@@ -1,8 +1,17 @@
-<h1><%= current_provider.facility_name %></h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Health Provider Profile</title>
+  </head>
+  <body>
+    <h1><%= current_provider.facility_name %></h1>
+    <div  
+    <p>Address:<%= current_provider.address %></p>
+    <p>Email:<%= current_provider.email %></p>
+    <p>Webpage:<%= current_provider.webpage %></p>
+    <p>About Us:<%= current_provider.about_us %></p>
+    <p>Phone Number:<%= current_provider.phone %></p>
 
-<p></p>
-<p><%= current_provider.address %></p>
-<p><%= current_provider.email %></p>
-<p><%= current_provider.webpage %></p>
-<p><%= current_provider.about_us %></p>
-<p><%= current_provider.phone %></p>
+  </body>
+</html>
