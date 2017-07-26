@@ -5,6 +5,8 @@ class EventsController < ApplicationController
 
   # GET /events
   # GET /events.json
+
+
   def index
     @events = current_provider.events
   end
@@ -12,6 +14,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @analytic = Analytic.new
   end
 
   # GET /events/new

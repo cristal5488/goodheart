@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170722190506) do
+ActiveRecord::Schema.define(version: 20170725213533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "analytics", force: :cascade do |t|
+    t.bigint "health_provider_id"
+    t.bigint "event_id"
+    t.time "arrival_time"
+    t.string "bloodtype"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_analytics_on_event_id"
+    t.index ["health_provider_id"], name: "index_analytics_on_health_provider_id"
+  end
 
   create_table "donors", force: :cascade do |t|
     t.string "first_name"
@@ -57,5 +68,7 @@ ActiveRecord::Schema.define(version: 20170722190506) do
     t.string "role", default: "health_provider"
   end
 
+  add_foreign_key "analytics", "events"
+  add_foreign_key "analytics", "health_providers"
   add_foreign_key "events", "health_providers"
 end
