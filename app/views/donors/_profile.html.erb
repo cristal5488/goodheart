@@ -1,8 +1,23 @@
-<h1>Donor</h1>
 
-<p><%= current_donor.first_name %></p>
-<p><%= current_donor.last_name %></p>
-<p><%= current_donor.email %></p>
-<p><%= current_donor.zipcode %></p>
-<p><%= current_donor.phone %></p>
-<p><%= current_donor.bloodtype %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>
+    <%= current_donor.first_name %>
+    <%= current_donor.last_name %></h1>
+    <meta charset="utf-8">
+    <title>Donor's Profile</title>
+  </head>
+  <body>
+
+    <div class="Contact">
+      <h2>Contact Infromation</h2>
+    <p>Email:<%= current_donor.email %></p>
+    <p><%= current_donor.zipcode %></p>
+    <p><%= current_donor.phone %></p>
+    </div>
+
+    <p><%= current_donor.bloodtype %></p>
+
+  </body>
+</html>
