@@ -1,10 +1,8 @@
 <!-- if is a donor -->
 <% if current_donor %>
-  <h1>Thank you for your good heart!</h1>
   <%= render partial: 'donors/profile' %>
   <!-- render a partil for donor -->
 <% else %>
-  <h1>I'm a health provider</h1>
   <%= render partial: 'health_providers/profile'%>
 <% end %>
 
