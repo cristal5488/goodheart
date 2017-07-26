@@ -22,7 +22,7 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
-
+        <td><%= event.health_provider.name %></td>
         <td><%= event.event_name %></td>
         <td><%= event.date %></td>
         <td><%= event.start_time %></td>
