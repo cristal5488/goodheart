@@ -59,5 +59,11 @@
 
 <%= render :partial => 'analytics/form', analytic: @analytic  %>
 
+<%= hidden_field_tag :analytics_data, current_user.analytics.group(:bloodtype).count.map{|a| {name:a.first,y:a.last}}.to_json %>
+<div id="analytic">
+
+
+</div>
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', root_path %>

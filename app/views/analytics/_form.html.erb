@@ -12,9 +12,10 @@
     </div>
   <% end %>
 
+
   <div class="field">
     <%= form.label :bloodtype %>
-    <%= form.text_field :bloodtype, id: :analytic_bloodtype %>
+    <%= form.select :bloodtype, options_for_select(['A+','O+','B+','AB+','A-','O-','B-','AB-']), class: 'form-control' %>
   </div>
 
   <div class="field">
