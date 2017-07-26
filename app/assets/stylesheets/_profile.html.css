@@ -1,9 +1,39 @@
+
+
+body {
+  background-image: url();
+}
+
+
+
+
+
 .Contact {
-  color: red;
-  position: absolute;
-   left: 0;
-   top: 50%;
-   width: 100%;
+  color: black;
+   /*width: 100%;*/
    text-align: center;
    font-size: 18px;
+}
+
+.bloodtype{
+  text-align: center;
+  position: relative;
+  border-radius: 14px;
+  border: 3px solid white;
+  background-repeat: no-repeat;
+  background-position: left;
+  margin-top: 2em;
+}
+
+.bloodtype .type {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  font-size: 14px;
+  margin-top: 35px;
+}
+.bloodtype .type-grade {
+  font-weight: bold;
+  font-size: 40px;
 }
