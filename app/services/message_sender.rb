@@ -5,21 +5,28 @@ class MessageSender
 
   def initialize
     @client = Twilio::REST::Client.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
-    @phone_numbers = User.all.map(&:phone_number)
   end
 
-  def send_messages
-    @phone_numbers.each do |ph|
-      @client.messages.create(:from => twilio_number, :to => ph , :body => "Please attend this blood drive event and help save a life."
- 
+  def send_messages(event)
+    begin
+      scheme = request.scheme
+      host = request.host
+    rescue NameError
+      scheme = 'http'
+      host = 'testing'
+    end
+    message = <<EOL
+Please attend this blood drive event and help save lives.
+#{scheme}://#{host}
+EOL
+    Donor.where(zipcode: event.zipcode).map(&:phone).each do |ph|
+      @client.messages.create(:from => twilio_number, :to => ph , :body =>message)
     end
   end
-
-
 
   private
 
   def twilio_number
-    twilio_number = '+17864012751 '
+    twilio_number = '+17864012751'
   end
 end

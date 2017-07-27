@@ -25,8 +25,8 @@
         <td><%= event.health_provider.name %></td>
         <td><%= event.event_name %></td>
         <td><%= event.date %></td>
-        <td><%= event.start_time %></td>
-        <td><%= event.end_time %></td>
+        <td><%= event.start_time.getlocal.strftime("%I:%M:%S %p")%></td>
+        <td><%= event.end_time.getlocal.strftime("%I:%M:%S %p") %></td>
         <td><%= event.description %></td>
         <td><%= event.address %></td>
         <td><%= event.zipcode %></td>

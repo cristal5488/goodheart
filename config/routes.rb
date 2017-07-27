@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :events do
     resources :analytics
+    # resources :donors
   end
 
   root 'dashboard#index'
@@ -14,5 +15,8 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
   get '/events/index' => 'events#index'
   get '/events/new' => 'events#new'
+
+  # get '/donors/edit' => 'donors#edit'
+  resource :donor
 
 end

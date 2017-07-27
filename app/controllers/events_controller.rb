@@ -39,6 +39,9 @@ class EventsController < ApplicationController
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
+      # send message
+      message_sender = MessageSender.new
+      message_sender.send_messages(@event)
     end
   end
 
