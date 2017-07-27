@@ -1,28 +1,40 @@
 
 
-body {
-  background-image: url();
+h1.profile-header {
+  margin-bottom: 20px;
 }
 
 
+div.event-div {
+  margin-top: 400px;
+  font-size: 35px;
+  font-weight: bold;
+}
 
 
-
-.Contact {
+.contact {
   color: black;
-   /*width: 100%;*/
+  border: 3px solid red;
+   border-radius: 50%;
    text-align: center;
    font-size: 18px;
+   margin: 100px 0 0 50px;
+   width: 291px;
+   height:178px;
 }
 
 .bloodtype{
   text-align: center;
   position: relative;
   border-radius: 14px;
-  border: 3px solid white;
+  /*border: 3px solid white;*/
   background-repeat: no-repeat;
   background-position: left;
   margin-top: 2em;
+}
+
+.bloodtype .img-circle {
+  border-radius: 50%;
 }
 
 .bloodtype .type {
@@ -36,4 +48,17 @@ body {
 .bloodtype .type-grade {
   font-weight: bold;
   font-size: 40px;
+}
+
+.backgroundpic{
+  background-image: url(http://www.postfactum.ks.ua/wp-content/uploads/2017/05/big_child_club_1_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.doublebac{
+  background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/04/Dark-Purple-Solid-Background-.jpg);
+  opacity: 0.5;
+
 }
