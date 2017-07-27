@@ -1,9 +1,17 @@
 class HealthProvider < ApplicationRecord
   has_secure_password
   has_many :events
+  has_many :analytics
 
+  validates_presence_of :facility_name, :address, message: 'form must be completed'
+  validates_uniqueness_of :phone
+  validates_uniqueness_of :email
+
+<<<<<<< HEAD
   validates_presence_of :facility_name, :address, message: 'this must be completed'
   validates_uniqueness_of :phone
+=======
+>>>>>>> master
 
   def name
     self.facility_name

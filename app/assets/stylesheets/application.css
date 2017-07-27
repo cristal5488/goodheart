@@ -14,6 +14,9 @@
  *= require_self
  */
 
+ * { box-sizing: border-box; }
+
+
 
 /*.form-group {
   margin-bottom: 15px;
@@ -24,9 +27,17 @@
 font-weight: bold;
 }*/
 
-.button {
+.links{
   text-align: right;
+  font-size: 20px;
+
+
+
 }
+
+/*.button {
+  text-align: right;
+}*/
 
 body {
   font-family: 'Raleway';

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bloodtype:</strong>
+  <%= @analytic.bloodtype %>
+</p>
+
+<p>
+  <strong>Arrival time:</strong>
+  <%= @analytic.arrival_time %>
+</p>
+
+<%= link_to 'Edit', edit_analytic_path(@analytic) %> |
+<%= link_to 'Back', analytics_path %>

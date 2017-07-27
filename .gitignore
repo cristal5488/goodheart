@@ -17,4 +17,5 @@
 /yarn-error.log
 
 .byebug_history
+local_env.yml
 .env
