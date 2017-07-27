@@ -33,15 +33,23 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
-        format.json { render :show, status: :created, location: @event }
+        # send message
+        begin
+          message_sender = MessageSender.new
+          message_sender.send_messages(@event)
+          # wet
+          format.html { redirect_to @event, notice: 'Event was successfully created.' }
+          format.json { render :show, status: :created, location: @event }
+        rescue Twilio::REST::RequestError
+          # wet
+          format.html { redirect_to @event, notice: 'Event was successfully created.' }
+          format.json { render :show, status: :created, location: @event }
+        end
       else
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
-      # send message
-      message_sender = MessageSender.new
-      message_sender.send_messages(@event)
+
     end
   end
 
