@@ -12,12 +12,12 @@
 
 <p>
   <strong>Start time:</strong>
-  <%= @event.start_time %>
+  <%= @event.start_time.strftime("%I:%M:%S %p") %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @event.end_time %>
+  <%= @event.end_time.strftime("%I:%M:%S %p") %>
 </p>
 
 <p>
@@ -45,7 +45,7 @@
   <%= @event.phone %>
 </p>
 
-
+<button type="button">Click Me!</button>
 
 <style>
   /* Always set the map height explicitly to define the size of the div
@@ -117,9 +117,11 @@
       width: auto;
     }
   }
+
+
 </style>
 
-<div id="floating-panel">
+<!-- <div id="floating-panel">
   <strong>Start:</strong>
   <select id="start">
     <option value="chicago, il">Chicago</option>
@@ -152,25 +154,26 @@
     <option value="los angeles, ca">Los Angeles</option>
   </select>
 </div>
-<div id="right-panel"></div>
+<! <div id="right-panel"></div> -->
 <div id="map"></div>
 
-<h1>Analitycs</h1>
 
-<% @event.analytics.each do |a|%>
-  <p>Bloodtype: <%= a.bloodtype %></p>
-  <p><%= a.arrival_time.strftime("Arrived on %m/%d/%Y at %I:%M%p") %></p>
-<% end  %>
+<% if current_provider and current_provider.has_event?(@event) %>
+  <h1>Analitycs</h1>
 
-<%= render :partial => 'analytics/form', analytic: @analytic  %>
+  <!-- <% @event.analytics.each do |a|%>
+      <p>Bloodtype: <%= a.bloodtype %></p>
+      <p><%= a.arrival_time.strftime("Arrived on %m/%d/%Y at %I:%M%p") %></p>
+    <% end  %> -->
 
-<%= hidden_field_tag :analytics_data, current_provider.analytics.group(:bloodtype).count.map{|a| {name:a.first,y:a.last}}.to_json %>
-<div id="analytic">
+  <%= render :partial => 'analytics/form', analytic: @analytic  %>
 
 
-</div>
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
+  <%= hidden_field_tag :analytics_data, current_provider.analytics.group(:bloodtype).count.map{|a| {name:a.first,y:a.last}}.to_json %>
+
+  <div id="analytic"></div>
+<% end %>
 
 <% if current_provider and current_provider.has_event?(@event) %>
   <%= link_to 'Edit', edit_event_path(@event) %> |
@@ -178,3 +181,7 @@
 
 
 <%= link_to 'Back', root_path %>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhbQgPh31lGOj3BuPQHrTjuR_rMe2_NQU&callback=initMap">
+</script>
