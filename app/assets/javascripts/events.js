@@ -29,4 +29,5 @@ document.addEventListener("turbolinks:load", function() {
            data: JSON.parse($("#analytics_data").val())
         }]
     });
+
 });
