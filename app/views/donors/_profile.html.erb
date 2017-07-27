@@ -1,23 +1,35 @@
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <h1>
+
+  <center><h1 class="profile-header"> Welcome
     <%= current_donor.first_name %>
-    <%= current_donor.last_name %></h1>
+    <%= current_donor.last_name %>!</h1></center>
     <meta charset="utf-8">
     <title>Donor's Profile</title>
   </head>
-  <body>
+  <div class="doublebac">
+  <body class="backgroundpic">
 
-    <div class="Contact">
-      <h2>Contact Infromation</h2>
-    <p>Email: <%= current_donor.email %></p>
-    <p>Zipcode: <%= current_donor.zipcode %></p>
-    <p>Phone number: <%= current_donor.phone %></p>
+
+
+
+
+
+    <div class="bloodtype col-md-6">
+
+      <img class="img-circle" src="/images/one_heart.png">
+      <h2 class="type">Bloodtype is: <br/> <span class="type-grade"><%= current_donor.bloodtype %></span></h2>
     </div>
 
-    <p><%= current_donor.bloodtype %></p>
 
-  </body>
-</html>
+    <div class="contact col-md-6">
+      <h2>Contact Info</h2>
+      <p>Email: <%= current_donor.email %></p>
+      <p>Zipcode: <%= current_donor.zipcode %></p>
+      <p>Phone number: <%= current_donor.phone %></p>
+    </div>
+
+    <!-- <h1 class="event-h1">Events</h1><br> -->
+      <br>
+      <br>
+      <center><div class="event-div">Events</div><center>
+ </div>
