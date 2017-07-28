@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :events
+  resources :events do
+    resources :analytics
+    # resources :donors
+  end
+
   root 'dashboard#index'
 
   get '/health_provider_signup'=> 'health_providers#new'
@@ -11,5 +15,8 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
   get '/events/index' => 'events#index'
   get '/events/new' => 'events#new'
+
+  # get '/donors/edit' => 'donors#edit'
+  resource :donor
 
 end

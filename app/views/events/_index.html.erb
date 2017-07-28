@@ -25,6 +25,7 @@
 
   <tbody>
     <% @events.each do |event| %>
+<<<<<<< HEAD
       <tr class="info">
 
         <td class="event-titles" id ="name"><%= event.event_name %></td>
@@ -38,6 +39,19 @@
         <td class="event-titles"id ="phone"><%= event.phone %></td><br>
 
 
+=======
+      <tr>
+        <td><%= event.health_provider.name %></td>
+        <td><%= event.event_name %></td>
+        <td><%= event.date %></td>
+        <td><%= event.start_time.getlocal.strftime("%I:%M:%S %p")%></td>
+        <td><%= event.end_time.getlocal.strftime("%I:%M:%S %p") %></td>
+        <td><%= event.description %></td>
+        <td><%= event.address %></td>
+        <td><%= event.zipcode %></td>
+        <td><%= event.bloodtype %></td>
+        <td><%= event.phone %></td>
+>>>>>>> 9e92301088c8429828b64b27a45a0e958de5a209
         <td><%= link_to 'Show', event %></td>
 
 
