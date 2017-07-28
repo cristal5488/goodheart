@@ -5,6 +5,7 @@ class HealthProvidersController < ApplicationController
   end
 
   def edit
+    set_health_provider
   end
 
   def create
@@ -40,7 +41,7 @@ class HealthProvidersController < ApplicationController
 
   private
   def set_health_provider
-    @health_provider = HealthProvider.find(params[:id])
+    @health_provider = current_provider
   end
 
   def health_provider_params
