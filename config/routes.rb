@@ -18,5 +18,6 @@ Rails.application.routes.draw do
 
   # get '/donors/edit' => 'donors#edit'
   resource :donor
+  resource :health_provider 
 
 end

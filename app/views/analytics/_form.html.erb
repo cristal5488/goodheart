@@ -11,8 +11,12 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %>
+<% end %>
 
+<div class="col-sm-4">
+
+  <h1>New Analytic</h1>
 
   <div class="field">
     <%= form.label :bloodtype %>
@@ -24,9 +28,8 @@
     <%= form.time_select :arrival_time, id: :analytic_arrival_time %>
   </div>
 
-  <div class="actions">
+  <button type="button" class="btn btn-default">
     <%= form.submit %>
-  </div>
-
-<% end %>
+  </button>
+</div>
 <% end %>

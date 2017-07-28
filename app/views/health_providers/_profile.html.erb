@@ -16,7 +16,8 @@
     Email: &nbsp<%= current_provider.email %>
     Webpage: &nbsp<%= link_to current_provider.webpage %>
     About Us: &nbsp<%= current_provider.about_us %>
-    Phone Number: &nbsp<%= current_provider.phone %>
+    Phone Number: &nbsp<%= current_provider.phone %> <br>
+    <%= link_to 'Edit', edit_health_provider_path %>
 
     </div>
   </body>

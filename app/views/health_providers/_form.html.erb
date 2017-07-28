@@ -1,4 +1,4 @@
-<%= form_for @health_provider, url: '/health_providers' do |form| %>
+<%= form_for @health_provider, url: health_provider_path do |form| %>
   <% if @health_provider.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(health_provider.errors.count, "error") %> prohibited this health_provider from being saved:</h2>
@@ -10,6 +10,7 @@
       </ul>
     </div>
   <% end %>
+
 <div class="col-sm-8  col-sm-offset-2">
   <div class="form-group">
     <%= form.label :facility_name %>
