@@ -7,12 +7,6 @@ class HealthProvider < ApplicationRecord
   validates_uniqueness_of :phone
   validates_uniqueness_of :email
 
-<<<<<<< HEAD
-  validates_presence_of :facility_name, :address, message: 'this must be completed'
-  validates_uniqueness_of :phone
-=======
->>>>>>> master
-
   def name
     self.facility_name
   end
@@ -21,3 +15,4 @@ class HealthProvider < ApplicationRecord
     event.health_provider == self
   end
 end
+# end

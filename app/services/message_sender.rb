@@ -1,13 +1,13 @@
 class MessageSender
-  def self.send_messages
-    new.send_messages
-  end
 
   def initialize
     @client = Twilio::REST::Client.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
   end
+  # redirect default value false
+  # when ready for prodcution, remove from method calling
+  def send_messages(event, redirect: false)
+    return if redirect #if redirect is true return(break)
 
-  def send_messages(event)
     begin
       scheme = request.scheme
       host = request.host
