@@ -1,5 +1,6 @@
 <%= form_with(model: Analytic.new, url: event_analytics_path(@event.id), method: :post) do |form| %>
 
+<% if @analytic.present? %>
   <% if @analytic.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(analytic.errors.count, "error") %> prohibited this analytic from being saved:</h2>
@@ -29,9 +30,15 @@
 
   <button type="button" class="btn btn-default">
     <%= form.submit %>
+<<<<<<< HEAD
   </button>
 </div>
 
 
 
+=======
+  </div>
+
+<% end %>
+>>>>>>> 153446fed5e453914e3e38fb9e2bd523472d0770
 <% end %>
