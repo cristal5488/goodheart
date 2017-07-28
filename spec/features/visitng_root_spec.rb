@@ -9,7 +9,7 @@ RSpec.feature "User visiting root", type: :feature do
   it "shows login input form" do
     visit root_path
     fill_in "Email", with: "test@example.com"
-    fill_in "password", with: "Testing"
+    fill_in "Password", with: "Testing"
   end
 
   it 'shows link to donor signup' do

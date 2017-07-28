@@ -3,8 +3,23 @@
     <h2><%= pluralize(target.errors.count, "error") %> prevented this record from being saved:</h2>
     <ul>
     <% target.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+      <div class="msg">
+        <%= msg %>
+      </div>
     <% end %>
     </ul>
   </div>
 <% end %>
+
+<style>
+
+.msg {
+  color: red;
+  font-size: 20px;
+  font-style: italic; bold;
+  text-align: center;
+
+
+}
+
+</style>

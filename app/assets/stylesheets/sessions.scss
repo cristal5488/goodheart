@@ -2,13 +2,6 @@
 // They will automatically be included in application.css.
 
 
-h2 {
-color: black;
-font-size: 20px;
-text-align: center;
-font-weight: bolder;
-}
-
 /* bg youtube video styles */
 .video-background {
   background: #000;
@@ -39,10 +32,11 @@ font-weight: bolder;
   padding: 1em;
   // opacity: 0.5;
 }
-form.col-sm-6.col-sm-offset-3{
-background-color: rgba(204, 204, 204, 0.5);
-
-border-radius: 12px;
+form .col-sm-6.col-sm-offset-3{
+  background-color: rgb(128, 118, 116);
+      border-radius: 12px;
+      padding-bottom: 60px;
+      padding-top: 40px;
 
 }
 // .vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
@@ -68,7 +62,7 @@ border-radius: 12px;
   box-sizing: content-box;
   border: none;
   font: normal 58px/1 Arial, Helvetica, sans-serif;
-  color: rgba(206,64,64,1);
+  color: #5F1B0D;
   text-overflow: ellipsis;
   text-shadow: 4px 4px 6px rgba(19,20,20,0.91) ;
 }
