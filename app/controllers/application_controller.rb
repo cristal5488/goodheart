@@ -1,13 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  # def current_user
-  #   if session[:donor_id].present?
-  #     @current_user||= Donor.find(session[:donor_id])
-  #   elsif session[:health_provider_id].present?
-  #     @current_user ||= HealthProvider.find(session[:health_provider_id])
-  #   end
-  # end
 
   def current_donor
     @current_donor||= Donor.find_by(id: session[:donor_id]) if session[:donor_id]

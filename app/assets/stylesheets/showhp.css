@@ -2,6 +2,8 @@
    text-align: center;
    color: #D64938;
    padding-top: 100px;
+   padding-bottom: 50px;
+
  }
 
  .button{
@@ -12,4 +14,7 @@
    text-align: center;
    color: #D64938;
    padding-bottom: 50px;
+ }
+ .col-sm-4{
+   padding-left: 100px;
  }
