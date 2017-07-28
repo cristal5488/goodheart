@@ -10,24 +10,15 @@
       <strong><p>Facility Information</p></strong>
     </div>
 
-<<<<<<< HEAD
-<p></p>
-<p><%= current_provider.address %></p>
-<p><%= current_provider.email %></p>
-<p><%= current_provider.webpage %></p>
-<p><%= current_provider.about_us %></p>
-<p><%= current_provider.phone %></p>
-<%= link_to 'Edit', edit_health_provider_path %> 
-=======
     <div class="info">
 
     Address: &nbsp<%= current_provider.address %>
     Email: &nbsp<%= current_provider.email %>
     Webpage: &nbsp<%= link_to current_provider.webpage %>
     About Us: &nbsp<%= current_provider.about_us %>
-    Phone Number: &nbsp<%= current_provider.phone %>
+    Phone Number: &nbsp<%= current_provider.phone %> <br>
+    <%= link_to 'Edit', edit_health_provider_path %>
 
     </div>
   </body>
 </html>
->>>>>>> 0fdcc29862f095833e1b4deeae6a9296ec92b7ae

@@ -5,7 +5,7 @@
 
 <table>
   <thead>
-  
+
     <tr class="titles">
 
       <th class="event-titles">Event name</th>
@@ -25,21 +25,7 @@
 
   <tbody>
     <% @events.each do |event| %>
-<<<<<<< HEAD
-      <tr class="info">
 
-        <td class="event-titles" id ="name"><%= event.event_name %></td>
-        <td class="event-titles"id ="date"><%= event.date %></td>
-        <td class="event-titles"id ="start_time"><%= event.start_time %></td>
-        <td class="event-titles"id ="end_time"><%= event.end_time %></td>
-        <td class="event-titles"id ="description"><%= event.description %></td>
-        <td class="event-titles"id ="addr"><%= event.address %></td>
-        <td class="event-titles"id ="zip"><%= event.zipcode %></td>
-        <td class="event-titles"id ="bloodt"><%= event.bloodtype %></td>
-        <td class="event-titles"id ="phone"><%= event.phone %></td><br>
-
-
-=======
       <tr>
         <td><%= event.health_provider.name %></td>
         <td><%= event.event_name %></td>
@@ -51,7 +37,7 @@
         <td><%= event.zipcode %></td>
         <td><%= event.bloodtype %></td>
         <td><%= event.phone %></td>
->>>>>>> 9e92301088c8429828b64b27a45a0e958de5a209
+
         <td><%= link_to 'Show', event %></td>
 
 
