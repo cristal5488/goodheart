@@ -4,6 +4,7 @@
 
 <table>
   <thead>
+
     <tr>
 
       <th>Event name</th>
@@ -15,12 +16,32 @@
       <th>Zipcode</th>
       <th>Bloodtype</th>
       <th>Phone</th>
+
+
+    <tr class="titles">
+
+      <th class="event-titles">Event name</th>
+      <th class="event-titles">Date</th>
+      <th class="event-titles">Start time</th>
+      <th class="event-titles">End time</th>
+      <th class="event-titles">Description</th>
+      <th class="event-titles">Address</th>
+      <th class="event-titles">Zipcode</th>
+      <th class="event-titles">Bloodtype</th>
+      <th class="event-titles">Phone</th>
+
+
+>>>>>>> c9715b5d19a3c87d6c3bbae2eda1f15d69332b62
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @events.each do |event| %>
+<<<<<<< HEAD
+=======
+
+>>>>>>> c9715b5d19a3c87d6c3bbae2eda1f15d69332b62
       <tr>
         <td><%= event.health_provider.name %></td>
         <td><%= event.event_name %></td>
@@ -32,6 +53,10 @@
         <td><%= event.zipcode %></td>
         <td><%= event.bloodtype %></td>
         <td><%= event.phone %></td>
+
+
+
+
         <td><%= link_to 'Show', event %></td>
         <% if current_provider and current_provider.has_event?(event) %>
           <td><%= link_to 'Edit', edit_event_path(event) %></td>
