@@ -5,9 +5,7 @@ class MessageSender
   end
   # redirect default value false
   # when ready for prodcution, remove from method calling
-  def send_messages(event, redirect: false)
-    return if redirect #if redirect is true return(break)
-
+  def send_messages(event)
     begin
       scheme = request.scheme
       host = request.host
@@ -17,7 +15,7 @@ class MessageSender
     end
     message = <<EOL
 Please attend this blood drive event and help save lives.
-#{scheme}://#{host}
+#{scheme}://#{host}/events/#{event.id}
 EOL
     Donor.where(zipcode: event.zipcode).map(&:phone).each do |ph|
       @client.messages.create(:from => twilio_number, :to => ph , :body =>message)
