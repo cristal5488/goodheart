@@ -5,8 +5,6 @@ class EventsController < ApplicationController
 
   # GET /events
   # GET /events.json
-
-
   def index
     @events = current_provider.events
   end
@@ -14,7 +12,6 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
-    @analytic = Analytic.new
   end
 
   # GET /events/new
@@ -33,23 +30,15 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        # send message
-        begin
-          message_sender = MessageSender.new
-          message_sender.send_messages(@event)
-          # wet
-          format.html { redirect_to @event, notice: 'Event was successfully created.' }
-          format.json { render :show, status: :created, location: @event }
-        rescue Twilio::REST::RequestError
-          # wet
-          format.html { redirect_to @event, notice: 'Event was successfully created.' }
-          format.json { render :show, status: :created, location: @event }
-        end
+        # redirect set to true, when ready for prodcution remove or set to false
+        message_sender = MessageSender.new
+        message_sender.send_messages(@event, redirect: true)
+        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
-
     end
   end
 
