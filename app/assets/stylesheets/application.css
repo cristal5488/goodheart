@@ -140,6 +140,21 @@ padding-right: 0px;
   padding-left: 35px;
 }
 
-.event-h1 {
+.info-provider li {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
 
+.head-1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.hp-profile {
+  border: solid;
+  color: white;
+  background-color: #b6a4b2;
+  width: 40%;
+  text-align: center;
 }

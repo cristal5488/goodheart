@@ -17,20 +17,6 @@
       <th>Bloodtype</th>
       <th>Phone</th>
 
-
-    <tr class="titles">
-
-      <th class="event-titles">Event name</th>
-      <th class="event-titles">Date</th>
-      <th class="event-titles">Start time</th>
-      <th class="event-titles">End time</th>
-      <th class="event-titles">Description</th>
-      <th class="event-titles">Address</th>
-      <th class="event-titles">Zipcode</th>
-      <th class="event-titles">Bloodtype</th>
-      <th class="event-titles">Phone</th>
-
-
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -39,6 +25,8 @@
     <% @events.each do |event| %>
 
       <tr>
+        <div class="">
+
         <td><%= event.health_provider.name %></td>
         <td><%= event.event_name %></td>
         <td><%= event.date %></td>
@@ -49,6 +37,7 @@
         <td><%= event.zipcode %></td>
         <td><%= event.bloodtype %></td>
         <td><%= event.phone %></td>
+      </div>
 
 
 

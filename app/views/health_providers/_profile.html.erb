@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Health Provider Profile</title>
-  </head>
-  <body>
+
+    <div class="hp-profile">
+
+
     <div class="head-1">
       <h1><%= current_provider.facility_name %></h1>
       <strong><p>Facility Information</p></strong>
     </div>
 
-    <div class="info">
-
-    Address: &nbsp<%= current_provider.address %>
-    Email: &nbsp<%= current_provider.email %>
-    Webpage: &nbsp<%= link_to current_provider.webpage %>
-    About Us: &nbsp<%= current_provider.about_us %>
-    Phone Number: &nbsp<%= current_provider.phone %> <br>
+    <div class="info-provider">
+<ul>
+  <li>Address: &nbsp<%= current_provider.address %></li>
+  <li>Email: &nbsp<%= current_provider.email %></li>
+  <li>Webpage: &nbsp<%= link_to current_provider.webpage %></li>
+  <li>About Us: &nbsp<%= current_provider.about_us %></li>
+  <li>Phone Number: &nbsp<%= current_provider.phone %></li>
+</ul>
+  </div>
     <%= link_to 'Edit', edit_health_provider_path %>
 
     </div>
-  </body>
-</html>
