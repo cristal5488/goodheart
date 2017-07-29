@@ -31,10 +31,16 @@ class EventsController < ApplicationController
     respond_to do |format|
       if @event.save
         # redirect set to true, when ready for prodcution remove or set to false
-        message_sender = MessageSender.new
-        message_sender.send_messages(@event, redirect: true)
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
-        format.json { render :show, status: :created, location: @event }
+        begin
+          message_sender = MessageSender.new
+          message_sender.send_messages(@event)
+        rescue Twilio::REST::RequestError
+          # fail silently
+        ensure
+          format.html { redirect_to @event, notice: 'Event was successfully created.' }
+          format.json { render :show, status: :created, location: @event }
+        end
+
       else
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
@@ -83,6 +89,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit( :event_name, :date, :start_time, :end_time, :description, :address, :zipcode, :bloodtype, :phone)
+      params.require(:event).permit( :event_name, :date, :start_time, :end_time, :description, :address, :zipcode, :bloodtype)
     end
 end
