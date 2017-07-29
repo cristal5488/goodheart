@@ -17,7 +17,7 @@ class MessageSender
     end
     message = <<EOL
 Please attend this blood drive event and help save lives.
-#{scheme}://#{host}
+#{scheme}://#{host}/events/#{event.id}
 EOL
     Donor.where(zipcode: event.zipcode).map(&:phone).each do |ph|
       @client.messages.create(:from => twilio_number, :to => ph , :body =>message)
