@@ -19,6 +19,11 @@
   pointer-events: none;
 }
 #vidtop-content {
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 	top: 0;
 	color: #fff;
 }
@@ -32,11 +37,9 @@
   padding: 1em;
   // opacity: 0.5;
 }
-form.col-sm-6.col-sm-offset-3{
-background-color: rgba(204, 204, 204, 0.5);
-
-border-radius: 12px;
-
+form.session-new {
+  background-color: rgba(204, 204, 204, 0.5);
+  border-radius: 12px;
 }
 // .vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
 // .vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
