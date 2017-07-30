@@ -3,11 +3,11 @@
 
 
     <div class="head-1">
-      <h1><%= current_provider.facility_name.capitalize %></h1>
-      <strong><p>Facility Information</p></strong>
+      <h1><%= current_provider.facility_name.upcase %></h1>
     </div>
 
     <div class="info-provider">
+  <strong><p>Facility Information</p></strong>
 
   <p>Address: &nbsp<%= current_provider.address %></p>
   <p>Email: &nbsp<%= current_provider.email %></p>

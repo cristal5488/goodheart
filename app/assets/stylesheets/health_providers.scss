@@ -13,17 +13,18 @@
   display:flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 250px;
+  padding-top: 150px;
   color: white;
   border-radius: 30px;
+  width: 100%
 }
 .r-side img {
   border: dashed white;
-  border-radius: 45%;
+  border-radius: 50%;
 }
 .r-side h1{
   font-weight: bold;
-  font-size: 30px
+  font-size: 25px
 }
 .r-side li {
   font-size: 20px;

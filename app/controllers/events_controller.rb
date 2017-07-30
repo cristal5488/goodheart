@@ -52,7 +52,7 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to @event, notice: 'Event  updated.' }
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit }
@@ -67,7 +67,7 @@ class EventsController < ApplicationController
     @event = current_provider.events
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to root_path, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Event destroyed.' }
       format.json { head :no_content }
     end
   end
