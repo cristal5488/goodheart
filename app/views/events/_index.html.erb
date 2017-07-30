@@ -1,103 +1,41 @@
+
+<!-- <div class="event-div">Events</div> -->
 <div class="col-xs-12">
   <p id="notice"><%= notice %></p>
+  <h4 class="card-text text-center" style="font-size: 45px;">Events</h4>
 
-<<<<<<< HEAD
-<h1>Events</h1>
-
-<table>
-  <thead>
-
-    <tr>
-
-      <th>Event name</th>
-      <th>Date</th>
-      <th>Start time</th>
-      <th>End time</th>
-      <th>Description</th>
-      <th>Address</th>
-      <th>Zipcode</th>
-      <th>Bloodtype</th>
-      <th>Phone</th>
-
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
-
-      <tr>
-        <div class="">
-
-        <td><%= event.health_provider.name %></td>
-        <td><%= event.event_name %></td>
-        <td><%= event.date %></td>
-        <td><%= event.start_time.getlocal.strftime("%I:%M:%S %p")%></td>
-        <td><%= event.end_time.getlocal.strftime("%I:%M:%S %p") %></td>
-        <td><%= event.description %></td>
-        <td><%= event.address %></td>
-        <td><%= event.zipcode %></td>
-        <td><%= event.bloodtype %></td>
-        <td><%= event.phone %></td>
-      </div>
-
-
-
-
-        <td><%= link_to 'Show', event %></td>
+  <% @events.each do |event| %>
+  <!-- Event cards -->
+  <div class="col-sm-4">
+    <div class="card event-card">
+      <img class="card-img-top"
+      src="http://www.mountdorabuzz.com/uploads/2/7/1/7/27170205/published/fullsizerender-35_3.jpg?1496784812"
+      alt=""
+      style="width: 100%;">
+      <div class="card-block">
+        <h4 class="card-title">Health Provider: <%= event.health_provider.name %></h4>
+        <p class="card-text"><span class="sub">Event name:</span> <strong><%= event.event_name %></strong></p>
+        <p class="card-text"><span class="sub">Date:</span> <strong><%= event.date %></strong></p>
+        <p class="card-text"><span class="sub">Start time:</span> <strong><%= event.start_time.getlocal.strftime("%I:%M:%S %p")%></strong></p>
+        <p class="card-text"><span class="sub">End time:</span> <strong><%= event.end_time.getlocal.strftime("%I:%M:%S %p") %></strong></p>
+        <p class="card-text"><span class="sub">Description:</span> <strong><%= event.description %></strong></p>
+        <p class="card-text"><span class="sub">Address:</span> <strong><%= event.address %></strong></p>
+        <p class="card-text"><span class="sub">Zipcode:</span> <strong><%= event.zipcode %></strong></p>
+        <p class="card-text"><span class="sub">Bloodtype:</span> <strong><%= event.bloodtype %></strong></p>
+        <p class="card-text"><span class="sub">Phone number:</span> <strong><%= event.phone %></strong></p>
         <% if current_provider and current_provider.has_event?(event) %>
-          <td><%= link_to 'Edit', edit_event_path(event) %></td>
-          <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-=======
-  <!-- <div class="event-div">Events</div> -->
-  <div class="col-xs-12">
-    <h4 class="card-text text-center" style="font-size: 45px;">Events</h4>
-    <% @events.each do |event| %>
-    <!-- Event cards -->
-    <div class="col-sm-4">
-      <div class="card event-card">
-        <img class="card-img-top"
-        src="http://www.mountdorabuzz.com/uploads/2/7/1/7/27170205/published/fullsizerender-35_3.jpg?1496784812"
-        alt=""
-        style="width: 100%;">
-        <div class="card-block">
-          <h4 class="card-title">Health Provider: <%= event.health_provider.name %></h4>
-          <p class="card-text"><span class="sub">Event name:</span> <strong><%= event.event_name %></strong></p>
-          <p class="card-text"><span class="sub">Date:</span> <strong><%= event.date %></strong></p>
-          <p class="card-text"><span class="sub">Start time:</span> <strong><%= event.start_time.getlocal.strftime("%I:%M:%S %p")%></strong></p>
-          <p class="card-text"><span class="sub">End time:</span> <strong><%= event.end_time.getlocal.strftime("%I:%M:%S %p") %></strong></p>
-          <p class="card-text"><span class="sub">Description:</span> <strong><%= event.description %></strong></p>
-          <p class="card-text"><span class="sub">Address:</span> <strong><%= event.address %></strong></p>
-          <p class="card-text"><span class="sub">Zipcode:</span> <strong><%= event.zipcode %></strong></p>
-          <p class="card-text"><span class="sub">Bloodtype:</span> <strong><%= event.bloodtype %></strong></p>
-          <p class="card-text"><span class="sub">Phone number:</span> <strong><%= event.phone %></strong></p>
           <%= link_to 'Show', event, class: 'btn btn-info' %>
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
+          <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+        <small class="text-muted">Last updated 3 mins ago</small>
       </div>
     </div>
-    <% end %>
   </div>
-
-  <div class="spacer clearifx col-xs-12"></div>
-
-  <% if current_provider %>
-  <%= link_to 'New Event', new_event_path %>
-  <% end%>
-
-
-  <% if current_provider and current_provider.has_event?(events) %>
-  <td><%= link_to 'Edit', edit_event_path(event) %></td>
-  <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   <% end %>
 </div>
->>>>>>> MrKnight
 
-<div class="clearfix">
+<div class="spacer clearifx col-xs-12"></div>
 
-</div>
+<% if current_provider %>
+  <%= link_to 'New Event', new_event_path %>
+<% end%>

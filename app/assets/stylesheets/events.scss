@@ -1,13 +1,13 @@
-<<<<<<< HEAD
-.event-name {
-  margin-left: 20px;
-  border-color: #FF6347;
-  padding-bottom: 40px;
-  margin-top: 40px;
-  background-color: #ffebe6;
-  font-weight: bold;
-  font-size: 15px;
-
+.display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  select {
+    margin: 0 5px;
+  }
+  label {
+    min-width: 70px;
+  }
 }
 
 .event-time {
@@ -23,10 +23,7 @@
 
 .event-submit{
   border: solid;
-=======
-// Place all the styles related to the events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+}
 
 .event-card {
   background: #8D99AE;
@@ -39,5 +36,4 @@
       }
     }
   }
->>>>>>> MrKnight
 }
