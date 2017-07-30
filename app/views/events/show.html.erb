@@ -81,12 +81,12 @@
   <% if current_provider and current_provider.has_event?(@event) %>
 <div class="edit-hp">
   <%= link_to 'Edit', edit_event_path(@event) %>
-  <%= link_to 'Back', root_path %>
+
 </div>
   <% end %>
 
 
-
+  <%= link_to 'Back', root_path %>
 
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhbQgPh31lGOj3BuPQHrTjuR_rMe2_NQU&callback=initMap">
