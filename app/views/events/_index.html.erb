@@ -8,10 +8,9 @@
   <!-- Event cards -->
   <div class="col-sm-4">
     <div class="card event-card">
-  
+
       <div class="card-block">
-        <h4 class="card-title">Health Provider: <%= event.health_provider.name %></h4>
-        <p class="card-text"><span class="sub">Event name:</span> <strong><%= event.event_name %></strong></p>
+        <center><h4 class="card-title"><strong><%= event.event_name %></strong</h4></center>
         <p class="card-text"><span class="sub">Date:</span> <strong><%= event.date %></strong></p>
         <p class="card-text"><span class="sub">Start time:</span> <strong><%= event.start_time.getlocal.strftime("%I:%M:%S %p")%></strong></p>
         <p class="card-text"><span class="sub">End time:</span> <strong><%= event.end_time.getlocal.strftime("%I:%M:%S %p") %></strong></p>
@@ -19,12 +18,12 @@
         <p class="card-text"><span class="sub">Address:</span> <strong><%= event.address %></strong></p>
         <p class="card-text"><span class="sub">Zipcode:</span> <strong><%= event.zipcode %></strong></p>
         <p class="card-text"><span class="sub">Bloodtype:</span> <strong><%= event.bloodtype %></strong></p>
-        <p class="card-text"><span class="sub">Phone number:</span> <strong><%= event.phone %></strong></p>
         <% if current_provider and current_provider.has_event?(event) %>
-          <%= link_to 'Show', event, class: 'btn btn-info' %>
-          <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <center><%= link_to 'Show', event, class: 'btn btn-warning' %> </center>
+          <div class="remove">
+            <%= link_to 'Remove', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
         <% end %>
-        <small class="text-muted">Last updated 3 mins ago</small>
       </div>
     </div>
   </div>

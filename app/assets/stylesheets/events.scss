@@ -1,3 +1,17 @@
+.edit-hp {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sub {
+  color: yellow;
+}
+
+.card-title {
+  font-size: 40px;
+  font-weight: lighter;
+}
+
 .display-flex {
   display: flex;
   justify-content: center;
@@ -26,13 +40,15 @@
 }
 
 .event-card {
-  background: #E64343	;
+  background: #BF2F2F	;
   color: #EDF2F4;
+  border-radius: 20px;
   .card-block {
     .card-text {
       display: flex;
       .sub {
           margin-right: auto;
+
       }
     }
   }

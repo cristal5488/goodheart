@@ -112,10 +112,13 @@
   color:white;
 }
 
-.info-provider {
-  font-size: 20px;
+.info-provider p {
+  font-size: 15px;
   text-align: center;
+	font-weight: lighter;
 	color: black;
+	letter-spacing: normal;
+
 }
 
 .head-1 {
@@ -127,9 +130,8 @@
 	font-size: 25px;
 }
 .hp-profile {
-  border: solid;
-  color: white;
-  background-color: #F5EE9E;
+  color: red;
+  /*background-color: #F5EE9E;*/
   width: 40%;
   text-align: center;
 	margin-left: 30%;
