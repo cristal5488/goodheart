@@ -23,3 +23,12 @@
 .event-submit{
   border: solid;
 }
+
+.display-flex {
+  display: flex;
+  justify: center;
+  align-items: center;
+  label {
+    min-width: 100px;
+  }
+}

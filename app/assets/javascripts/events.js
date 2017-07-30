@@ -1,4 +1,6 @@
 document.addEventListener("turbolinks:load", function() {
+  // $('.selectpicker').selectpicker({});
+
     // Build the chart
     Highcharts.chart('analytic', {
         chart: {
