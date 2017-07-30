@@ -34,17 +34,26 @@
       <div class="fixed">
         <% if current_donor %>
           <span class="left">Signed in as <strong><%= current_donor.name %> 👋 </strong></span>
+          <%= link_to root_path, class: 'logo-center' do %>
+            <%= image_tag('/images/ghlogo2.png', class: 'img-fluid')%>
+          <%end%>
           <span class="right">
               <%= link_to "Logout", '/logout', class: 'btn btn-danger' %>
               <%= link_to 'Edit', edit_donor_path, class: 'btn btn-warning' %>
           </span>
         <% elsif current_provider %>
           <span class="left">Signed in as <strong><%= current_provider.name %> 👋 </strong> </span>
+          <%= link_to root_path, class: 'logo-center' do %>
+            <%= image_tag('/images/ghlogo2.png', class: 'img-fluid')%>
+          <%end%>
           <span class="right">
             <%= link_to "Logout", '/logout', class: 'btn btn-danger' %>
             <%= link_to 'Edit', edit_health_provider_path, class: 'btn btn-warning' %>
           </span>
         <% else %>
+          <%= link_to root_path, class: 'logo-center' do %>
+            <%= image_tag('/images/ghlogo2.png', class: 'img-fluid')%>
+          <%end%>
           <span class="right"><%= link_to 'Login', '/login', class: 'btn btn-info' %> | <%= link_to 'Provider Signup', '/health_provider_signup', class: 'btn btn-info' %> | <%= link_to 'Donor Signup', '/donor_signup' , class: 'btn btn-info'%></span>
         <% end %>
       </div>
