@@ -42,7 +42,7 @@
           <span class="left">Signed in as <strong><%= current_provider.name %> 👋 </strong> </span>
           <span class="right">
             <%= link_to "Logout", '/logout', class: 'btn btn-danger' %>
-            <%= link_to 'Edit', edit_donor_path, class: 'btn btn-warning' %>
+            <%= link_to 'Edit', edit_health_provider_path, class: 'btn btn-warning' %>
           </span>
         <% else %>
           <span class="right"><%= link_to 'Login', '/login', class: 'btn btn-info' %> | <%= link_to 'Provider Signup', '/health_provider_signup', class: 'btn btn-info' %> | <%= link_to 'Donor Signup', '/donor_signup' , class: 'btn btn-info'%></span>
