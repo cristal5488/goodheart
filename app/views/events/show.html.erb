@@ -70,9 +70,9 @@
   <% if current_provider and current_provider.has_event?(@event) %>
     <%= hidden_field_tag :analytics_data, current_provider.analytics.group(:bloodtype).count.map{|a| {name:a.first,y:a.last}}.to_json %>
       <div id="analytic" style="display:inline-block; width:400px; height:350px; margin-right:0"></div><br></div>
-</div>
-  <% end %>
 
+  <% end %>
+</div>
 
 
 
