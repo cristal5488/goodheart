@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Health Provider Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div class="container-fluid">
     <div class="head-1">
       <h1><%= current_provider.facility_name %></h1>
       <strong><p>Facility Information</p></strong>
@@ -18,7 +20,8 @@
     About Us: &nbsp<%= current_provider.about_us %>
     Phone Number: &nbsp<%= current_provider.phone %> <br>
     <%= link_to 'Edit', edit_health_provider_path %>
-
+  </div>
     </div>
+
   </body>
 </html>
