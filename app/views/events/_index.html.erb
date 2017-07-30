@@ -18,11 +18,11 @@
         <p class="card-text"><span class="sub">Address:</span> <strong><%= event.address %></strong></p>
         <p class="card-text"><span class="sub">Zipcode:</span> <strong><%= event.zipcode %></strong></p>
         <p class="card-text"><span class="sub">Bloodtype:</span> <strong><%= event.bloodtype %></strong></p>
+        <p class="card-text"><span class="sub">Phone number:</span> <strong><%= event.phone %></strong></p>
+        <center><%= link_to 'Show', event, class: 'btn btn-info' %></center>
         <% if current_provider and current_provider.has_event?(event) %>
-          <center><%= link_to 'Show', event, class: 'btn btn-warning' %> </center>
-          <div class="remove">
-            <%= link_to 'Remove', event, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
+
+          <center><%= link_to 'Destroy', event, class: 'btn btn-warning', method: :delete, data: { confirm: 'Are you sure?' } %><center>
         <% end %>
       </div>
     </div>
@@ -33,5 +33,8 @@
 <div class="spacer clearifx col-xs-12"></div>
 
 <% if current_provider %>
+<div class="new-event-link">
   <%= link_to 'New Event', new_event_path %>
+  
+</div>
 <% end%>
