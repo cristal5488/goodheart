@@ -1,12 +1,13 @@
-.event-name {
-  margin-left: 20px;
-  border-color: #FF6347;
-  padding-bottom: 40px;
-  margin-top: 40px;
-  background-color: #ffebe6;
-  font-weight: bold;
-  font-size: 15px;
-
+.display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  select {
+    margin: 0 5px;
+  }
+  label {
+    min-width: 70px;
+  }
 }
 
 .event-time {
@@ -22,4 +23,17 @@
 
 .event-submit{
   border: solid;
+}
+
+.event-card {
+  background: #8D99AE;
+  color: #EDF2F4;
+  .card-block {
+    .card-text {
+      display: flex;
+      .sub {
+          margin-right: auto;
+      }
+    }
+  }
 }
