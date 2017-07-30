@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
   <center><h1 class="profile-header"> Welcome
     <%= current_donor.first_name %>
@@ -37,3 +38,15 @@
  </div>
 
 <%= link_to 'Edit', edit_donor_path %>
+=======
+<div class="col-xs-12 backgroundpic">
+  <div class="gradient"></div>
+  <center>
+    <h1 class="profile-header"> Welcome <%= current_donor.first_name %> <%= current_donor.last_name %>!</h1>
+  </center>
+  <div class="bloodtype col-md=-12">
+    <img class="img-circle" src="/images/one_heart.png" style="box-shadow: 1px 1px 13px;">
+    <h2 class="type">Bloodtype is: <br/> <span class="type-grade"><%= current_donor.bloodtype %></span></h2>
+  </div>
+</div>
+>>>>>>> MrKnight
