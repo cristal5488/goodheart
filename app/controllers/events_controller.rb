@@ -30,7 +30,6 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        # redirect set to true, when ready for prodcution remove or set to false
         begin
           message_sender = MessageSender.new
           message_sender.send_messages(@event)

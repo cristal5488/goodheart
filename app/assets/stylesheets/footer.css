@@ -112,24 +112,28 @@
   color:white;
 }
 
-.info-provider li {
-  font-size: 15px;
-  font-weight: bold;
+.info-provider {
+  font-size: 20px;
   text-align: center;
+	color: black;
 }
 
 .head-1 {
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
 }
 
+.head-1 p {
+	font-size: 25px;
+}
 .hp-profile {
   border: solid;
   color: white;
-  background-color: #b6a4b2;
+  background-color: #F5EE9E;
   width: 40%;
   text-align: center;
-}
+	margin-left: 30%;
+	margin-top: 20px;
 
 .text-muted{
   color: white!important;

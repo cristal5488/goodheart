@@ -1,20 +1,42 @@
- .ana{
+ /*.ana{
    text-align: center;
    color: #D64938;
-   padding-top: 100px;
-   padding-bottom: 50px;
+   /*padding-top: 100px;*/
+   /*padding-bottom: 50px;
 
- }
+ }*/*/
+.blood-added  {
+  color: green;
+    text-align: center;
+    background-color: greenyellow;
+}
 
  .button{
    text-decoration: none;
  }
 
- .blood_event{
+ .blood-event{
    text-align: center;
    color: #D64938;
    padding-bottom: 50px;
+   background-color: #F5EE9E;
+   padding-top: 10px;
+   margin-top: 0;
+   margin-left: 0;
  }
  .col-sm-4{
-   padding-left: 100px;
+   padding-top: 10px;
+   font-size: 20px;
+   /*background-color: #F5EE9E;*/
+   padding-right: 10px;
  }
+
+.track-blood {
+  border: solid;
+  border-color:#F5EE9E;
+  text-align: center;
+}
+
+#map {
+  text-align: center;
+}

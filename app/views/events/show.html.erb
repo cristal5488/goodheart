@@ -1,8 +1,10 @@
-<p id="notice"><%= notice %></p>
+<div class="blood-added">
+<%= notice %>
+</div>
 
-<h1 class="blood_event">Blood Drive</h1>
+<h1 class="blood-event">Event Details</h1>
 
-<div class="col-sm-4">
+<div class="col-sm-3">
 
 <p>
   <strong>Event:</strong><br>
@@ -44,22 +46,20 @@
   <%= @event.bloodtype %>
 </p>
 
-<p>
-  <strong>Phone:</strong><br>
-  <%= @event.phone %>
-</p>
 
 </div>
 
-<div id="map"></div>
 
+
+<div class="analytic-page">
 
 
 
 <!-- Create Analytics (**RENDER FORM**) ONLY if is provider -->
   <% if current_provider and current_provider.has_event?(@event) %>
-    <h1 class="ana" >Analitycs</h1>
+     <div class="ana">
       <%= render :partial => 'analytics/form', analytic: @analytic  %>
+      </div>
   <% end %>
 
 
@@ -70,8 +70,8 @@
   <% if current_provider and current_provider.has_event?(@event) %>
     <%= hidden_field_tag :analytics_data, current_provider.analytics.group(:bloodtype).count.map{|a| {name:a.first,y:a.last}}.to_json %>
       <div id="analytic" style="display:inline-block; width:400px; height:350px; margin-right:0"></div><br></div>
+</div>
   <% end %>
-
 
 
 
@@ -91,3 +91,5 @@
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhbQgPh31lGOj3BuPQHrTjuR_rMe2_NQU&callback=initMap">
 </script>
+
+<div id="map"></div>
