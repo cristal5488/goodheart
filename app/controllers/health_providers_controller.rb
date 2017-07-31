@@ -1,10 +1,12 @@
 class HealthProvidersController < ApplicationController
+  before_action :set_health_provider, only: [:edit, :update]
 
   def new
     @health_provider = HealthProvider.new
   end
 
   def edit
+    set_health_provider
   end
 
   def create
@@ -21,11 +23,11 @@ class HealthProvidersController < ApplicationController
   def update
     respond_to do |format|
       if @health_provider.update(health_provider_params)
-        format.html { redirect_to @health_provider, notice: 'Health provider was successfully updated.' }
-        format.json { render :show, status: :ok, location: @health_provider }
+        format.html { redirect_to root_path, notice: 'Health provider was successfully updated.' }
+
       else
         format.html { render :edit }
-        format.json { render json: @health_provider.errors, status: :unprocessable_entity }
+
       end
     end
   end
@@ -40,7 +42,7 @@ class HealthProvidersController < ApplicationController
 
   private
   def set_health_provider
-    @health_provider = HealthProvider.find(params[:id])
+    @health_provider = current_provider
   end
 
   def health_provider_params

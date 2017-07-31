@@ -8,7 +8,7 @@ document.addEventListener("turbolinks:load", function() {
             type: 'pie'
         },
         title: {
-            text: 'Bloodtype Analytics'
+            text: 'Bloodtype Tracker'
         },
         tooltip: {
             pointFormat: '{series.name}: <br/> total:<b>{point.y}</b> <br/> percentage: <b>{point.percentage:.1f}%</b>'

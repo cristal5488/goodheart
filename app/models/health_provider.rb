@@ -3,9 +3,9 @@ class HealthProvider < ApplicationRecord
   has_many :events
   has_many :analytics
 
-  validates_presence_of :facility_name, :address, message: 'this must be completed'
+  validates_presence_of :facility_name, :address, message: 'form must be completed'
   validates_uniqueness_of :phone
-
+  validates_uniqueness_of :email
 
   def name
     self.facility_name
@@ -15,3 +15,4 @@ class HealthProvider < ApplicationRecord
     event.health_provider == self
   end
 end
+# end

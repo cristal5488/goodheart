@@ -3,9 +3,9 @@ class DashboardController < ApplicationController
 
   def index
     @events = if current_provider
-                current_provider.events
-              else
-                Event.all
-              end
+      current_provider.events
+    else
+      Event.all
+    end
   end
 end

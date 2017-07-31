@@ -2,24 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .r-side {
-  background-color: #D64938;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3019+0,cf0404+84 */
+  background: #ff3019; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #ff3019 0%, #cf0404 84%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #ff3019 0%,#cf0404 84%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ff3019 0%,#cf0404 84%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  // background-color: #D64938;
   min-height: 1000px;
   display:flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 250px;
+  padding-top: 150px;
   color: white;
+  border-radius: 30px;
+  width: 100%
 }
 .r-side img {
   border: dashed white;
-  border-radius: 45%;
+  border-radius: 50%;
 }
 .r-side h1{
   font-weight: bold;
-  font-size: 30px
+  font-size: 25px
 }
 .r-side li {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: lighter;
 }
 .m-side {
@@ -35,4 +43,12 @@
   font-size: 30px;
   font-weight: bold;
   padding-bottom: 40px;
+}
+
+.error_explanation p {
+  color: red;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
 }

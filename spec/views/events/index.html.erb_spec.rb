@@ -10,7 +10,7 @@ RSpec.describe "events/index", type: :view do
         :address => "Address",
         :zipcode => "Zipcode",
         :bloodtype => "Bloodtype",
-        :phone => "Phone"
+
       ),
       Event.create!(
         :health_provider => nil,
@@ -19,7 +19,7 @@ RSpec.describe "events/index", type: :view do
         :address => "Address",
         :zipcode => "Zipcode",
         :bloodtype => "Bloodtype",
-        :phone => "Phone"
+
       )
     ])
   end
@@ -32,6 +32,5 @@ RSpec.describe "events/index", type: :view do
     assert_select "tr>td", :text => "Address".to_s, :count => 2
     assert_select "tr>td", :text => "Zipcode".to_s, :count => 2
     assert_select "tr>td", :text => "Bloodtype".to_s, :count => 2
-    assert_select "tr>td", :text => "Phone".to_s, :count => 2
   end
 end

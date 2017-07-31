@@ -1,26 +1,32 @@
-
-<div class="col-md-5 r-side">
-  <img src="./images/pic3.png" alt="" width="190">
-  <h1>Facts about the blood supply</h1>
-  <ul>
-    <li>The number of whole blood and red blood cell units collected in the U.S. in a year: 13.6 million</li>
-    <li>The number of blood donors in the U.S. in a year: 6.8 million</li>
-    <li>Although an estimated 38 percent of the U.S. population is eligible to donate blood at any given time, less than 10 percent of that eligible population actually do each year.</li>
-    <li>Blood cannot be manufactured – it can only come from generous donors.</li>
-    <li>Type O negative blood (red cells) can be transfused to patients of all blood types. It is always in great demand and often in short supply.</li>
-    <li>Type AB positive plasma can be transfused to patients of all other blood types. AB plasma is also usually in short supply.</li>
-  </ul>
-</div>
-
-<div class="col-md-7 l-side">
-  <div class="m-side">
-    <img src="./images/ghlogo.png" alt="" width="100">
-    <h1>Become a Provider</h1>
-    <p>Manage all blood drive details and statisctics in one place</p>
+<div class="container col-md-10 col-md-offset-1" style="padding: 50px;">
+  <div class="col-md-5 r-side">
+    <img src="./images/pic3.png" alt="" width="150">
+    <h1>Facts about the blood supply</h1>
+    <ul>
+      <li>The number of whole blood and red blood cell units collected in the U.S. in a year: 13.6 million</li>
+      <br>
+      <li>The number of blood donors in the U.S. in a year: 6.8 million</li>
+      <br>
+      <li>Although an estimated 38 percent of the U.S. population is eligible to donate blood at any given time, less than 10 percent of that eligible population actually do each year.</li>
+      <br>
+      <li>Blood cannot be manufactured – it can only come from generous donors.</li>
+      <br>
+      <li>Type O negative blood (red cells) can be transfused to patients of all blood types. It is always in great demand and often in short supply.</li>
+      <br>
+      <li>Type AB positive plasma can be transfused to patients of all other blood types. AB plasma is also usually in short supply.</li>
+    </ul>
   </div>
 
-  <%= render "error_messages",  target: @health_provider %>
+  <div class="col-md-7 l-side">
+    <div class="m-side">
+      <img src="./images/ghlogo.png" alt="" width="80">
+      <h1>Become a Provider</h1>
+      <p>Manage all details and statisctics in one place</p>
+    </div>
 
-  <%= render 'form', health_provider: @health_provider %>
+    <%= render "error_messages",  target: @health_provider %>
 
+    <%= render 'form', health_provider: @health_provider %>
+
+  </div>
 </div>

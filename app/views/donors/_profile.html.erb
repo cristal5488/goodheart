@@ -1,8 +1,7 @@
-
 <div class="col-xs-12 backgroundpic">
   <div class="gradient"></div>
   <center>
-    <h1 class="profile-header"> Welcome <%= current_donor.first_name %> <%= current_donor.last_name %>!</h1>
+    <h1 class="profile-header"> Welcome <%= current_donor.first_name.capitalize %> <%= current_donor.last_name.capitalize %></h1>
   </center>
   <div class="bloodtype col-md=-12">
     <img class="img-circle" src="/images/one_heart.png" style="box-shadow: 1px 1px 13px;">

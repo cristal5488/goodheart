@@ -5,8 +5,6 @@ class EventsController < ApplicationController
 
   # GET /events
   # GET /events.json
-
-
   def index
     @events = current_provider.events
   end
@@ -14,7 +12,6 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
-    @analytic = Analytic.new
   end
 
   # GET /events/new
@@ -33,8 +30,16 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
-        format.json { render :show, status: :created, location: @event }
+        begin
+          message_sender = MessageSender.new
+          message_sender.send_messages(@event)
+        rescue Twilio::REST::RequestError
+          # fail silently
+        ensure
+          format.html { redirect_to @event, notice: 'Event was successfully created.' }
+          format.json { render :show, status: :created, location: @event }
+        end
+
       else
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
@@ -47,7 +52,7 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to @event, notice: 'Event  updated.' }
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit }
@@ -59,9 +64,10 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
-    @event.destroy!
+    @event = current_provider.events
+    @event.destroy
     respond_to do |format|
-      format.html { redirect_to root_path, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Event destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -82,6 +88,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit( :event_name, :date, :start_time, :end_time, :description, :address, :zipcode, :bloodtype, :phone)
+      params.require(:event).permit( :event_name, :date, :start_time, :end_time, :description, :address, :zipcode, :bloodtype)
     end
 end

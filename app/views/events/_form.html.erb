@@ -1,63 +1,52 @@
-
-<%= form_with(model: event, local: true) do |form| %>
+<div class="spacer"></div>
+<h1 class="text-center">New Event</h1>
+<%= form_with(model: event, local: true, class: 'col-md-6  col-md-offset-3 col-lg-4 col-lg-offset-4') do |form| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
 
       <ul>
-      <% event.errors.full_messages.each do |message| %>
+        <% event.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="form-group">
     <%= form.label :event_name %>
-    <%= form.text_field :event_name, id: :event_event_name %>
+    <%= form.text_field :event_name, id: :event_event_name, class: 'form-control '  %>
   </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date, id: :event_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :start_time %>
-    <%= form.time_select :start_time, id: :event_start_time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :end_time %>
-    <%= form.time_select :end_time, id: :event_end_time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, id: :event_description %>
-  </div>
-
-  <div class="field">
+  <div class="form-group">
     <%= form.label :address %>
-    <%= form.text_field :address, id: :event_address %>
+    <%= form.text_field :address, id: :event_address, class: 'form-control ' %>
   </div>
-
-  <div class="field">
+  <div class="form-group">
     <%= form.label :zipcode %>
-    <%= form.text_field :zipcode, id: :event_zipcode %>
+    <%= form.text_field :zipcode, id: :event_zipcode, class: 'form-control ' %>
   </div>
-
-  <div class="field">
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :event_description, class: 'form-control ' %>
+  </div>
+  <div class="form-group col-sm-6 display-flex" style="padding-left: 0;">
     <%= form.label :bloodtype %>
-    <%= form.text_field :bloodtype, id: :event_bloodtype %>
+    <%= select_tag "event[bloodtype]", options_for_select(['A+','O+','B+','AB+','A-','O-','B-','AB-, all bloodtypes']), class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, id: :event_phone %>
+  <div class="form-group col-sm-6 display-flex" style="padding-right: 0;">
+    <%= form.label :date %>
+    <%= form.date_select :date, {}, {ampm: true, class: 'form-control ', id: :event_date} %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group col-sm-6 display-flex" style="padding-left: 0;">
+    <%= form.label :start_time %>
+    <%= form.time_select :start_time, {}, {ampm: true, class: 'form-control ', id: :event_start_time } %>
+  </div>
+  <div class="form-group col-sm-6 display-flex" style="padding-right: 0;">
+    <%= form.label :end_time %>
+    <%= form.time_select :end_time, {}, {ampm: true, class: 'form-control ', id: :event_end_time }%>
+  </div>
+  <div class="form-group col-xs-12 text-center">
+    <%= form.submit 'Save', class: 'btn btn-success btn-lg' %>
   </div>
 <% end %>
+<div class="clearfix"></div>
+<div class="spacer"></div>
