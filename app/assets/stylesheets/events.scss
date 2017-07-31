@@ -45,14 +45,34 @@
   border: solid;
 }
 
-.event-card {
-  background: #BF2F2F	;
+.event-card-top{
+  background: #BF2F2F    ;
   color: #EDF2F4;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   padding: 20px;
   .card-block {
     .card-text {
       display: flex;
+      .sub {
+          margin-right: auto;
+
+      }
+    }
+  }
+}
+
+.event-card-bottom {
+  background: #fff    ;
+  border: 1px solid #000;
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
+  .card-block {
+    .card-text {
+      color: #000;
+      display: flex;
+      span {
+        color: #000;
+      }
       .sub {
           margin-right: auto;
 
