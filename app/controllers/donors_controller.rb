@@ -27,21 +27,21 @@ class DonorsController < ApplicationController
   end
 
 
-  private
-  def donor_params
-    params.require(:donor).permit(
-    :first_name,
-    :last_name,
-    :email,
-    :password,
-    :password_confirmation,
-    :zipcode,
-    :phone,
-    :bloodtype,
-    )
-  end
+    private
+    def donor_params
+      params.require(:donor).permit(
+      :first_name,
+      :last_name,
+      :email,
+      :password,
+      :password_confirmation,
+      :zipcode,
+      :phone,
+      :bloodtype,
+      )
+    end
 
-  def set_donor
-    @donor = current_donor
-  end
+    def set_donor
+      @donor = current_donor
+    end
 end

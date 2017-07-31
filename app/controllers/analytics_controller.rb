@@ -30,7 +30,7 @@ class AnalyticsController < ApplicationController
     @analytic.health_provider_id = current_provider.id
     respond_to do |format|
       if @analytic.save!
-        format.html { redirect_to event_path(@event.id), notice: 'Analytic was successfully created.' }
+        format.html { redirect_to event_path(@event.id), notice: 'BLOODTYPE was successfully added.' }
         format.json { render :show, status: :created, location: @analytic }
       else
         format.html { render :new }

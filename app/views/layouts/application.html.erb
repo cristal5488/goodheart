@@ -5,6 +5,8 @@
     <%= csrf_meta_tags %>
 
     <!-- BOOTSTRAP V4 -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -34,46 +36,39 @@
       <div class="fixed">
         <% if current_donor %>
           <span class="left">Signed in as <strong><%= current_donor.name %> 👋 </strong></span>
+          <%= link_to root_path, class: 'logo-center' do %>
+            <%= image_tag('/images/ghlogo2.png', class: 'img-fluid')%>
+          <%end%>
           <span class="right">
               <%= link_to "Logout", '/logout', class: 'btn btn-danger' %>
               <%= link_to 'Edit', edit_donor_path, class: 'btn btn-warning' %>
           </span>
         <% elsif current_provider %>
-          <span class="left">Signed in as <strong><%= current_provider.name %> 👋 </strong> </sapn>
-            <span class="right">
-              <%= link_to "Logout", '/logout', class: 'btn btn-danger' %>
-              <%= link_to 'Edit', edit_donor_path, class: 'btn btn-warning' %>
-            </span>
+          <span class="left">Signed in as <strong><%= current_provider.name %> 👋 </strong> </span>
+          <%= link_to root_path, class: 'logo-center' do %>
+            <%= image_tag('/images/ghlogo2.png', class: 'img-fluid')%>
+          <%end%>
+          <span class="right">
+            <%= link_to "Logout", '/logout', class: 'btn btn-danger' %>
+            <%= link_to 'Edit', edit_health_provider_path, class: 'btn btn-warning' %>
+          </span>
         <% else %>
+          <%= link_to root_path, class: 'logo-center' do %>
+            <%= image_tag('/images/ghlogo2.png', class: 'img-fluid')%>
+          <%end%>
           <span class="right"><%= link_to 'Login', '/login', class: 'btn btn-info' %> | <%= link_to 'Provider Signup', '/health_provider_signup', class: 'btn btn-info' %> | <%= link_to 'Donor Signup', '/donor_signup' , class: 'btn btn-info'%></span>
         <% end %>
       </div>
     </header>
 
-
-<<<<<<< HEAD
-    <% if current_donor %>
-      Signed in as <strong><%= current_donor.name %> 👋 </strong> | <%= link_to "Logout", '/logout' %>
-    <% elsif current_provider %>
-      Signed in as <strong><%= current_provider.name %> 👋 </strong> | <%= link_to "Logout", '/logout' %>
-    <% else %>
-    <div class="links">
-      <%= link_to 'Login', '/login' %> | <%= link_to 'Provider Signup', '/health_provider_signup' %> | <%= link_to 'Donor Signup', '/donor_signup' %>
-
-    </div>
-    <% end %>
-
     <%= yield %>
-=======
-    <%= yield %>
-<!-- footer -->
+
+    <!-- footer -->
     <%= render 'footer'%>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
->>>>>>> MrKnight
   </body>
 
-  </html>
+</html>

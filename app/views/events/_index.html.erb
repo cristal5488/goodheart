@@ -1,5 +1,8 @@
+
+<!-- <div class="event-div">Events</div> -->
 <div class="col-xs-12">
   <p id="notice"><%= notice %></p>
+<<<<<<< HEAD
 
   <!-- <div class="event-div">Events</div> -->
   <div class="col-xs-12">
@@ -26,10 +29,34 @@
           <%= link_to 'Show', event, class: 'btn btn-info' %>
           <small class="text-muted">Last updated 3 mins ago</small>
         </div>
+=======
+  <h4 class="card-text text-center" style="font-size: 45px;">Events</h4>
+
+  <% @events.each do |event| %>
+  <!-- Event cards -->
+  <div class="col-sm-4">
+    <div class="card event-card">
+
+      <div class="card-block">
+        <center><h4 class="card-title"><strong><%= event.event_name %></strong</h4></center>
+        <p class="card-text"><span class="sub">Date:</span> <strong><%= event.date %></strong></p>
+        <p class="card-text"><span class="sub">Start time:</span> <strong><%= event.start_time.getlocal.strftime("%I:%M:%S %p")%></strong></p>
+        <p class="card-text"><span class="sub">End time:</span> <strong><%= event.end_time.getlocal.strftime("%I:%M:%S %p") %></strong></p>
+        <p class="card-text"><span class="sub">Description:</span> <strong><%= event.description %></strong></p>
+        <p class="card-text"><span class="sub">Address:</span> <strong><%= event.address %></strong></p>
+        <p class="card-text"><span class="sub">Zipcode:</span> <strong><%= event.zipcode %></strong></p>
+        <p class="card-text"><span class="sub">Bloodtype:</span> <strong><%= event.bloodtype %></strong></p>
+        <p class="card-text"><span class="sub">Phone number:</span> <strong><%= event.phone %></strong></p>
+        <center><%= link_to 'Show', event, class: 'btn btn-info' %></center>
+        <% if current_provider and current_provider.has_event?(event) %>
+
+          <center><%= link_to 'Destroy', event, class: 'btn btn-warning', method: :delete, data: { confirm: 'Are you sure?' } %><center>
+        <% end %>
+>>>>>>> 597e4b8733947f39a3563479e7293ac0729e10aa
       </div>
     </div>
-    <% end %>
   </div>
+<<<<<<< HEAD
 
   <div class="spacer clearifx colxs-12"></div>
 
@@ -41,9 +68,16 @@
   <% if current_provider and current_provider.has_event?(event) %>
   <td><%= link_to 'Edit', edit_event_path(event) %></td>
   <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+=======
+>>>>>>> 597e4b8733947f39a3563479e7293ac0729e10aa
   <% end %>
 </div>
 
-<div class="clearfix">
+<div class="spacer clearifx col-xs-12"></div>
 
+<% if current_provider %>
+<div class="new-event-link">
+  <%= link_to 'New Event', new_event_path %>
+  
 </div>
+<% end%>
