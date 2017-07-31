@@ -14,7 +14,7 @@
  *= require_self
  */
 
- * { box-sizing: border-box;
+ /** { box-sizing: border-box;
  }
 
  body, html{
@@ -24,6 +24,6 @@
    /*background: #EDF2F4;*/
  }
 
-.form-control {
+/*.form-control {
   height: 40px !important;
-}
+}*/

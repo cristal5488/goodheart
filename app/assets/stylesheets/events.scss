@@ -1,61 +1,61 @@
-// .new-event-link {
-//   text-align: right;
-//   font-size: 20px;
-//   padding-right: 10px;
-// }
-//
-// .edit-hp {
-//   font-size: 20px;
-//   font-weight: bold;
-// }
-//
-// .sub {
-//   color: yellow;
-// }
-//
-// .card-title {
-//   font-size: 40px;
-//   font-weight: lighter;
-// }
-//
-// .display-flex {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   select {
-//     margin: 0 5px;
-//   }
-//   label {
-//     min-width: 70px;
-//   }
-// }
-//
-// .event-time {
-//   margin-left: 40px;
-// }
-//
-// .event-name h1 {
-//   color: white;
-//   background-color: #ff3333;
-//   padding: 20px;
-//   text-align: center;
-// }
-//
-// .event-submit{
-//   border: solid;
-// }
-//
-// .event-card {
-//   background: #BF2F2F;
-//   color: #EDF2F4;
-//   border-radius: 20px;
-//   .card-block {
-//     .card-text {
-//       display: flex;
-//       .sub {
-//           margin-right: auto;
-//
-//       }
-//     }
-//   }
-// }
+.new-event-link {
+  text-align: right;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.edit-hp {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sub {
+  color: yellow;
+}
+
+.card-title {
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  select {
+    margin: 0 5px;
+  }
+  label {
+    min-width: 70px;
+  }
+}
+
+.event-time {
+  margin-left: 40px;
+}
+
+.event-name h1 {
+  color: white;
+  background-color: #ff3333;
+  padding: 20px;
+  text-align: center;
+}
+
+.event-submit{
+  border: solid;
+}
+
+.event-card {
+  background: #BF2F2F;
+  color: #EDF2F4;
+  border-radius: 20px;
+  .card-block {
+    .card-text {
+      display: flex;
+      .sub {
+          margin-right: auto;
+
+      }
+    }
+  }
+}
