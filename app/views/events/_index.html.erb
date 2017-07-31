@@ -31,15 +31,15 @@
     <% end %>
   </div>
 
-  <div class="spacer clearifx col-xs-12"></div>
+  <div class="spacer clearifx colxs-12"></div>
 
   <% if current_provider %>
   <%= link_to 'New Event', new_event_path %>
   <% end%>
 
 
-  <% if current_provider and current_provider.has_event?(events) %>
-  <td><%= link_to 'Edit', edit_event_path(event) %></td>
+  <% if current_provider and current_provider.has_event?(events)%>
+  <td><%= link_to 'Edit', edit_event_path(events) %></td>
   <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   <% end %>
 </div>
