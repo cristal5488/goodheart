@@ -23,9 +23,11 @@
           <p class="card-text"><span class="sub">Bloodtype:</span> <strong><%= event.bloodtype %></strong></p>
           <p class="card-text"><span class="sub">Phone number:</span> <strong><%= event.phone %></strong></p>
           <%= link_to 'Show', event, class: 'btn btn-info' %>
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <% if current_provider and current_provider.has_event?(event) %>
+          <%= link_to 'Destroy', event, class: 'btn btn-warning', method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
       </div> <!-- End of .card.event-card -->
     </div> <!-- End of .col-sm-4 -->
+  <% end%>
   <% end%>
 </div>
