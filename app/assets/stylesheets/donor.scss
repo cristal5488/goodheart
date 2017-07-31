@@ -1,4 +1,6 @@
-
+// Place all the styles related to the donor controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 .button {
   text-align: center;
 }
@@ -22,7 +24,7 @@ span.mill {
   background: -webkit-linear-gradient(left, #ff3019 0%,#cf0404 79%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #ff3019 0%,#cf0404 79%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 ); /* IE6-9 */
-
+  // background-color: #D64938;
   min-height: 1000px;
   display:flex;
   align-items: center;

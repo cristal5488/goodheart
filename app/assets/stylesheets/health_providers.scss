@@ -1,4 +1,6 @@
-
+// Place all the styles related to the HealthProviders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 .r-side {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3019+0,cf0404+84 */
   background: #ff3019; /* Old browsers */
@@ -6,7 +8,7 @@
   background: -webkit-radial-gradient(center, ellipse cover, #ff3019 0%,#cf0404 84%); /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at center, #ff3019 0%,#cf0404 84%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+  // background-color: #D64938;
   min-height: 1000px;
   display:flex;
   align-items: center;
