@@ -64,7 +64,6 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
-    @event = current_provider.events
     @event.destroy
     respond_to do |format|
       format.html { redirect_to root_path, notice: 'Event destroyed.' }
