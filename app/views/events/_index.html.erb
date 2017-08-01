@@ -1,33 +1,34 @@
-
 <!-- <div class="event-div">Events</div> -->
   <!-- <div class="event-div">Events</div> -->
 <div class="col-xs-12">
   <h4 class="card-text text-center" style="font-size: 45px;">Events</h4>
   <% @events.each do |event| %>
     <!-- Event cards -->
-    <div class="col-sm-4">
-      <div class="card event-card">
+    <div class="col-md-6 col-lg-4" style="margin-bottom: 25px;">
+      <div class="card event-card-top">
         <img class="card-img-top"
         src="http://www.mountdorabuzz.com/uploads/2/7/1/7/27170205/published/fullsizerender-35_3.jpg?1496784812"
         alt=""
         style="width: 100%;">
+        <h4 class="card-title"> <%= event.health_provider.name %></h4>
+      </div>
+      <div class="card event-card-bottom">
         <div class="card-block">
-          <h4 class="card-title">Health Provider: <%= event.health_provider.name %></h4>
           <p class="card-text"><span class="sub">Event name:</span> <strong><%= event.event_name %></strong></p>
           <p class="card-text"><span class="sub">Date:</span> <strong><%= event.date %></strong></p>
           <p class="card-text"><span class="sub">Start time:</span> <strong><%= event.start_time.getlocal.strftime("%I:%M:%S %p")%></strong></p>
           <p class="card-text"><span class="sub">End time:</span> <strong><%= event.end_time.getlocal.strftime("%I:%M:%S %p") %></strong></p>
-          <p class="card-text"><span class="sub">Description:</span> <strong><%= event.description %></strong></p>
-          <p class="card-text"><span class="sub">Address:</span> <strong><%= event.address %></strong></p>
+          <p class="card-text"><span class="sub">Description:</span> <strong><%= truncate(event.description, length: 25) %></strong></p>
+          <p class="card-text"><span class="sub">Address:</span> <strong><%= truncate(event.address, length: 30) %></strong></p>
           <p class="card-text"><span class="sub">Zipcode:</span> <strong><%= event.zipcode %></strong></p>
           <p class="card-text"><span class="sub">Bloodtype:</span> <strong><%= event.bloodtype %></strong></p>
           <p class="card-text"><span class="sub">Phone number:</span> <strong><%= event.phone %></strong></p>
           <%= link_to 'Show', event, class: 'btn btn-info' %>
           <% if current_provider and current_provider.has_event?(event) %>
-          <%= link_to 'Destroy', event, class: 'btn btn-warning', method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Destroy', event, class: 'btn btn-warning', method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end%>
         </div>
       </div> <!-- End of .card.event-card -->
     </div> <!-- End of .col-sm-4 -->
-  <% end%>
   <% end%>
 </div>

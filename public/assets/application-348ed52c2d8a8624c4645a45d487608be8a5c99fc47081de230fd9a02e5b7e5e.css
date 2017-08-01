@@ -1,0 +1,698 @@
+/* line 4, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/donor.scss */
+.button {
+  text-align: center;
+}
+
+/* line 8, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/donor.scss */
+.left-side img {
+  border: dashed;
+  border-color: white;
+  border-radius: 100px;
+  border-width: 2.5px;
+}
+
+/* line 15, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/donor.scss */
+span.mill {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* line 20, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/donor.scss */
+.left-side {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3019+0,cf0404+79 */
+  background: #ff3019;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #ff3019 0%, #cf0404 79%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ff3019 0%, #cf0404 79%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ff3019 0%, #cf0404 79%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 );
+  /* IE6-9 */
+  min-height: 1000px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 350px;
+  border-radius: 30px;
+}
+
+/* line 36, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/donor.scss */
+.left-side h1 {
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+  padding-bottom: 30px;
+  color: white;
+}
+
+/* line 44, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/donor.scss */
+.logo1 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* line 50, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/donor.scss */
+.register-donor {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* line 56, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/donor.scss */
+.right-side h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* line 64, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/donor.scss */
+.right-side p {
+  color: gray;
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+/* line 1, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.new-event-link {
+  text-align: right;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+/* line 7, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.edit-hp {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* line 12, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.sub {
+  color: yellow;
+}
+
+/* line 16, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.card-title {
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+/* line 21, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.display-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 25, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.display-flex select {
+  margin: 0 5px;
+}
+/* line 28, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.display-flex label {
+  min-width: 70px;
+}
+
+/* line 33, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.event-time {
+  margin-left: 40px;
+}
+
+/* line 37, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.event-name h1 {
+  color: white;
+  background-color: #ff3333;
+  padding: 20px;
+  text-align: center;
+}
+
+/* line 44, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.event-submit {
+  border: solid;
+}
+
+/* line 48, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.event-card-top {
+  background: #BF2F2F;
+  color: #EDF2F4;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+}
+/* line 54, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.event-card-top .card-block .card-text {
+  display: flex;
+}
+/* line 56, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.event-card-top .card-block .card-text .sub {
+  margin-right: auto;
+}
+
+/* line 64, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.event-card-bottom {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
+}
+/* line 70, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.event-card-bottom .card-block .card-text {
+  color: #000;
+  display: flex;
+}
+/* line 73, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.event-card-bottom .card-block .card-text span {
+  color: #000;
+}
+/* line 76, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/events.scss */
+.event-card-bottom .card-block .card-text .sub {
+  margin-right: auto;
+}
+/* line 1, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+}
+
+/* line 7, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter .footer-copyright {
+  background-color: #383737;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}
+
+/* line 14, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter .footer-copyright p {
+  margin: 10px;
+  color: #ccc;
+}
+
+/* line 19, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.7;
+}
+
+/* line 26, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter h5 {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* line 33, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter a {
+  color: #d2d1d1;
+  text-decoration: none;
+}
+
+/* line 38, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter a:hover, #myFooter a:focus {
+  text-decoration: none;
+  color: white;
+}
+
+/* line 43, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter .myCols {
+  text-align: center;
+}
+
+/* line 47, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter .social-networks {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 38px;
+}
+
+/* line 53, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter .social-networks a {
+  font-size: 32px;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #f9f9f9;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+/* line 62, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter .social-networks a:hover {
+  text-decoration: none;
+}
+
+/* line 67, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter .facebook:hover {
+  color: #0077e2;
+}
+
+/* line 71, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter .google:hover {
+  color: #ef1a1a;
+}
+
+/* line 75, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter .twitter:hover {
+  color: #00aced;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 80, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+  #myFooter {
+    text-align: center;
+  }
+}
+/* line 86, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+.button {
+  text-align: right;
+  font-size: 20px;
+}
+
+/* line 92, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+#myFooter {
+  background-color: #373a48;
+  color: white;
+}
+
+/* line 98, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+.content {
+  flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  min-height: 200px;
+}
+
+/*.card{
+  background-color: #bd3939;
+}*/
+/* line 108, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+.list-group-item {
+  color: black;
+}
+
+/* line 111, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+.card-block {
+  color: white;
+}
+
+/* line 115, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+.info-provider p {
+  font-size: 15px;
+  text-align: center;
+  font-weight: lighter;
+  color: black;
+  letter-spacing: normal;
+}
+
+/* line 124, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+.head-1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+/* line 129, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+.head-1 p {
+  font-size: 25px;
+}
+
+/* line 132, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+.hp-profile {
+  color: red;
+  /*background-color: #F5EE9E;*/
+  width: 40%;
+  text-align: center;
+  margin-left: 30%;
+  margin-top: 20px;
+}
+
+/* line 140, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/footer.scss */
+.text-muted {
+  color: white !important;
+}
+/* line 6, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/health_providers.scss */
+.r-side {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3019+0,cf0404+84 */
+  background: #ff3019;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #ff3019 0%, #cf0404 84%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #ff3019 0%, #cf0404 84%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ff3019 0%, #cf0404 84%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  min-height: 1000px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 150px;
+  color: white;
+  border-radius: 30px;
+  width: 100%;
+}
+
+/* line 23, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/health_providers.scss */
+.r-side img {
+  border: dashed white;
+  border-radius: 50%;
+}
+
+/* line 27, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/health_providers.scss */
+.r-side h1 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* line 31, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/health_providers.scss */
+.r-side li {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+/* line 35, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/health_providers.scss */
+.m-side {
+  text-align: center;
+}
+
+/* line 39, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/health_providers.scss */
+.l-side {
+  padding-top: 40px;
+}
+
+/* line 43, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/health_providers.scss */
+.l-side p {
+  color: gray;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+/* line 50, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/health_providers.scss */
+.error_explanation p {
+  color: red;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+/* line 4, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/maps.scss */
+#map {
+  text-align: center;
+  height: 100%;
+  margin-right: 360px;
+  max-height: 400px;
+  margin-bottom: 60px;
+  height: 502px;
+}
+/* line 3, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+h1.profile-header {
+  margin-bottom: 20px;
+}
+
+/* line 8, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+div.event-div {
+  /*margin-top: 500px;*/
+  /*margin-bottom: 52px;*/
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* line 16, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.contact {
+  color: black;
+  border: 3px solid black;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+  margin: 100px 0 0 50px;
+  width: 291px;
+  height: 178px;
+}
+
+/* line 27, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.bloodtype {
+  text-align: center;
+  position: relative;
+  border-radius: 14px;
+  /*border: 3px solid white;*/
+  background-repeat: no-repeat;
+  background-position: left;
+  margin: 2em;
+}
+
+/* line 37, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.bloodtype .img-circle {
+  border-radius: 50%;
+}
+
+/* line 41, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.bloodtype .type {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  font-size: 14px;
+  margin-top: 35px;
+}
+
+/* line 49, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.bloodtype .type-grade {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+/* line 54, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.backgroundpic {
+  background-image: url(/images/kids.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+/* line 59, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.backgroundpic .gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to right, #e1eec3, #f05053);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  opacity: 0.2;
+}
+
+/* line 72, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.top-header {
+  height: 50px;
+}
+/* line 74, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.top-header .fixed {
+  background: #F34D4D;
+  z-index: 10000;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* line 83, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.top-header .fixed .right {
+  margin-left: auto;
+  margin-right: 15px;
+}
+/* line 86, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.top-header .fixed .right a {
+  max-width: 100%;
+}
+/* line 90, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.top-header .fixed .logo-center {
+  margin: 0 auto;
+}
+/* line 92, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.top-header .fixed .logo-center img {
+  max-height: 50px;
+}
+/* line 96, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.top-header .fixed .left {
+  margin-left: 15px;
+}
+
+/* line 102, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/profile.scss */
+.spacer {
+  height: 40px;
+  width: 100%;
+  background-color: #F5EE9E;
+}
+/* bg youtube video styles */
+/* line 7, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+}
+
+/* line 13, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* line 22, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+#vidtop-content {
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  color: #fff;
+}
+
+/* line 31, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+.vid-info {
+  color: #fff;
+  padding: 1rem;
+}
+
+/* line 35, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+.vid-info form {
+  color: #1b1a1a;
+  padding: 1em;
+}
+
+/* line 42, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+form.session-new {
+  background-color: rgba(204, 204, 204, 0.5);
+  border-radius: 12px;
+}
+
+@media (min-aspect-ratio: 16 / 9) {
+  /* line 49, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+  .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
+}
+@media (max-aspect-ratio: 16 / 9) {
+  /* line 52, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+  .video-foreground {
+    width: 300%;
+    left: -100%;
+  }
+}
+@media all and (max-width: 600px) {
+  /* line 55, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+  .vid-info {
+    width: 50%;
+    padding: .5rem;
+  }
+
+  /* line 56, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+  .vid-info h1 {
+    margin-bottom: .2rem;
+  }
+}
+@media all and (max-width: 500px) {
+  /* line 59, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+  .vid-info .acronym {
+    display: none;
+  }
+}
+/* line 63, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/sessions.scss */
+.enjoy-css {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 58px/1 Arial, Helvetica, sans-serif;
+  color: #5F1B0D;
+  text-overflow: ellipsis;
+  text-shadow: 4px 4px 6px rgba(19, 20, 20, 0.91);
+}
+
+/* bg youtube video styles */
+/* line 1, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/showhp.scss */
+.blood-added {
+  color: green;
+  text-align: center;
+  background-color: greenyellow;
+}
+
+/* line 7, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/showhp.scss */
+.button {
+  text-decoration: none;
+}
+
+/* line 11, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/showhp.scss */
+.blood-event {
+  text-align: center;
+  color: #D64938;
+  padding-bottom: 50px;
+  background-color: #F5EE9E;
+  padding-top: 10px;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+/* line 21, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/showhp.scss */
+.col-sm-4 {
+  padding-top: 10px;
+  font-size: 20px;
+  /*background-color: #F5EE9E;*/
+  padding-right: 10px;
+}
+
+/* line 28, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/showhp.scss */
+.track-blood {
+  border: solid;
+  border-color: #F5EE9E;
+  text-align: center;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 17, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/application.scss */
+.axy {
+  color: white;
+}
+
+/* line 20, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/application.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 22, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/application.scss */
+body, html {
+  height: 100%;
+  font-family: 'Josefin Slab', serif;
+  /*background: #EDF2F4;*/
+}
+
+/* line 29, /Users/monicabello/Desktop/wyncode/goodheart/app/assets/stylesheets/application.scss */
+.form-control {
+  height: 40px !important;
+}

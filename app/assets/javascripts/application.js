@@ -29,15 +29,15 @@ function initMap() {
   directionsDisplay.setMap(map);
   directionsDisplay.setPanel(document.getElementById('right-panel'));
 
-  var control = document.getElementById('floating-panel');
-  control.style.display = 'block';
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+  // var control = document.getElementById('floating-panel');
+  // control.style.display = 'block';
+  // map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
 
   var onChangeHandler = function() {
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   };
-  document.getElementById('start').addEventListener('change', onChangeHandler);
-  document.getElementById('end').addEventListener('change', onChangeHandler);
+  // document.getElementById('start').addEventListener('change', onChangeHandler);
+  // document.getElementById('end').addEventListener('change', onChangeHandler);
 
   if (navigator.geolocation) { //Checks if browser supports geolocation
      navigator.geolocation.getCurrentPosition(function (position) {                                                              //This gets the

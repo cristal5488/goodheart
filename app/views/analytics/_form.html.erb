@@ -18,14 +18,14 @@
 
   <h1>Keeping track</h1>
 
-  <div class="field">
-    <%= form.label :bloodtype %>
-    <%= form.select :bloodtype, options_for_select(['A+','O+','B+','AB+','A-','O-','B-','AB-']), class: 'form-control' %>
+  <div class="form-group" style="display:flex;align-items: center;">
+    <%= form.label :bloodtype, style: 'min-width: 150px;' %>
+    <%= select_tag "analytic[bloodtype]", options_for_select(['A+','O+','B+','AB+','A-','O-','B-','AB-']),{ class: 'form-control'} %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :arrival_time %>
-    <%= form.time_select :arrival_time, id: :analytic_arrival_time %>
+    <%= form.time_select :arrival_time, id: :analytic_arrival_time, class: 'form-control' %>
   </div>
 
   <button type="button" class="btn btn-default">

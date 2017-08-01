@@ -1,14 +1,10 @@
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
-  height: 100%;
-  margin-right: 400px;
-}
-
-@media print {
-  #map {
-    height: 500px;
-    margin: 0;
-  }
-
+  text-align: center;
+   height: 100%;
+   margin-right: 360px;
+   max-height: 400px;
+   margin-bottom: 60px;
+  height: 502px;
 }
