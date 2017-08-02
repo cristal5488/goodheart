@@ -10,11 +10,12 @@
         src="http://www.lofaa.org.tw/2011%20Facebook/News/2012/image/2012-0702-a07.jpg"
         alt=""
         style="width: 100%;">
-        <h4 class="card-title"> <%= event.health_provider.name %></h4>
+        <h4 class="card-title"><center><%= event.health_provider.name %></h4></center>
+        <br>
+       <p class="card-text"><center><span class="sub">Event name:</span> <strong class="event_name"><%= event.event_name %></center></strong></p>
       </div>
       <div class="card event-card-bottom">
         <div class="card-block">
-          <p class="card-text"><span class="sub">Event name:</span> <strong><%= event.event_name %></strong></p>
           <p class="card-text"><span class="sub">Date:</span> <strong><%= event.date %></strong></p>
           <p class="card-text"><span class="sub">Start time:</span> <strong><%= event.start_time.getlocal.strftime("%I:%M:%S %p")%></strong></p>
           <p class="card-text"><span class="sub">End time:</span> <strong><%= event.end_time.getlocal.strftime("%I:%M:%S %p") %></strong></p>
